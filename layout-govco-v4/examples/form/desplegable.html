@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desplegable</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="../../src/form/desplegable.css" rel="stylesheet" type="text/css">
+    <link href="../../src/form/opcion-de-seleccion.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  
+  <div class="row m-0">
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-header">
+          Lista
+        </div>
+        <div class="card-body mb-5">
+          <!-- Lista -->
+          <label for="lista-desplegables" class="label-desplegable-govco">Etiqueta<span aria-required="true">*</span></label>
+          <div class="desplegable-govco" style="width:255px; height: 40px;" id="lista-desplegables" data-type="basic">
+            <select aria-invalid="false" aria-describedby="alert-id">
+              <option disabled selected>Escoger</option>
+              <option value="1">Opción 1</option>
+              <option value="2">Opción 2</option>
+              <option value="3">Opción 3</option>
+              <option value="4">Opción 4</option>
+              <option value="5">Opción 5</option>
+              <option value="6">Opción 6</option>
+            </select>
+          </div>
+          <span class="alert-desplegable-govco" id="alert-id">Texto de ayuda</span>
+          <!-- Fin Lista -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-header">
+          Lista - Estado Inválido
+        </div>
+        <div class="card-body mb-5">
+          <!-- Lista - Estado Inválido -->
+          <label for="lista-desplegables2" class="label-desplegable-govco">Etiqueta<span aria-required="true">*</span></label>
+          <div class="desplegable-govco" style="width:255px; height: 40px;" id="lista-desplegables2" data-type="basic">
+            <select aria-invalid="true" aria-describedby="alert-id2">
+              <option disabled selected>Escoger</option>
+              <option value="1">Opción 1</option>
+              <option value="2">Opción 2</option>
+              <option value="3">Opción 3</option>
+              <option value="4">Opción 4</option>
+              <option value="5">Opción 5</option>
+              <option value="6">Opción 6</option>
+            </select>
+          </div>
+          <span class="alert-desplegable-govco error-desplegable-govco" id="alert-id2" role="alert" aria-live="assertive">Texto de ayuda</span>
+          <!-- Fin Lista - Estado Inválido -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-header">
+          Filtro de búsqueda
+        </div>
+        <div class="card-body mb-5">
+          <!-- Filtro de búsqueda -->
+          <label for="lista-filtro-busqueda" class="label-desplegable-govco">Etiqueta<span aria-required="true">*</span></label>
+          <div class="desplegable-govco desplegable-filter-govco" style="width:255px; height: 40px;" id="lista-filtro-busqueda" data-type="filter">
+            <select aria-invalid="false" aria-describedby="alert-filter-id" placeholder="Ingrese texto...">
+              <option disabled selected>Escoger</option>
+              <option value="1">Opción 1</option>
+              <option value="2">Opción 2</option>
+              <option value="3">Opción 3</option>
+              <option value="4">Opción 4</option>
+              <option value="5">Opción 5</option>
+              <option value="6">Opción 6</option>
+            </select>
+          </div>
+          <span class="alert-desplegable-govco" id="alert-filter-id">Texto de ayuda</span>
+          <!-- Fin Filtro de búsqueda -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-header">
+          Filtro de búsqueda - Estado Inválido
+        </div>
+        <div class="card-body mb-5">
+          <!-- Filtro de búsqueda - Estado Inválido -->
+          <label for="lista-filtro-busqueda2" class="label-desplegable-govco">Etiqueta<span aria-required="true">*</span></label>
+          <div class="desplegable-govco desplegable-filter-govco" style="width:255px; height: 40px;" id="lista-filtro-busqueda2" data-type="filter">
+            <select aria-invalid="true" aria-describedby="alert-filter-id2" placeholder="Ingrese texto...">
+              <option disabled selected>Escoger</option>
+              <option value="1">Opción 1</option>
+              <option value="2">Opción 2</option>
+              <option value="3">Opción 3</option>
+              <option value="4">Opción 4</option>
+              <option value="5">Opción 5</option>
+              <option value="6">Opción 6</option>
+            </select>
+          </div>
+          <span class="alert-desplegable-govco error-desplegable-govco" id="alert-filter-id2" role="alert" aria-live="assertive">Texto de ayuda</span>
+          <!-- Fin Filtro de búsqueda - Estado Inválido -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-header">
+          Casillas de verificación - Checkbox
+        </div>
+        <div class="card-body mb-5">
+          <!-- Casillas de verificación - Checkbox -->
+          <label for="etiqueta" class="label-desplegable-govco">Etiqueta<span aria-required="true">*</span></label>
+          <div class="desplegable-govco" style="width:255px;" id="lista-check" data-type="check">
+            <select aria-invalid="false" aria-describedby="alert-check-id" placeholder="Escoger">
+              <option disabled selected>Escoger</option>
+              <option value="11">Opción 1</option>
+              <option value="12">Opción 2</option>
+              <option value="13">Opción 3</option>
+              <option value="14">Opción 4</option>
+              <option value="15">Opción 5</option>
+              <option value="16">Opción 6</option>
+            </select>
+          </div>
+          <span class="alert-desplegable-govco" id="alert-check-id">Texto de ayuda</span>
+          <!-- Fin Casillas de verificación - Checkbox -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-header">
+          Casillas de verificación - Switches
+        </div>
+        <div class="card-body mb-5">
+          <!-- Casillas de verificación - Switches -->
+          <label for="etiqueta" class="label-desplegable-govco">Etiqueta<span aria-required="true">*</span></label>
+          <div class="desplegable-govco" style="width:255px;" id="lista-check3" data-type="switch">
+            <select aria-invalid="false" aria-describedby="alert-check-id3" placeholder="Escoger">
+              <option disabled selected>Escoger</option>
+              <option value="31">Opción 1</option>
+              <option value="32">Opción 2</option>
+              <option value="33">Opción 3</option>
+              <option value="34">Opción 4</option>
+              <option value="35">Opción 5</option>
+              <option value="36">Opción 6</option>
+            </select>
+          </div>
+          <span class="alert-desplegable-govco" id="alert-check-id3">Texto de ayuda</span>
+          <!-- Fin Casillas de verificación - Switches -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-header">
+          Casillas de verificación - Radio button
+        </div>
+        <div class="card-body mb-5">
+          <!-- Casillas de verificación - Radio button -->
+          <label for="etiqueta" class="label-desplegable-govco">Etiqueta<span aria-required="true">*</span></label>
+          <div class="desplegable-govco" style="width:255px;" id="lista-check4" data-type="radio-button">
+            <select aria-invalid="false" aria-describedby="alert-check-id4" placeholder="Escoger">
+              <option disabled selected>Escoger</option>
+              <option value="41">Opción 1</option>
+              <option value="42">Opción 2</option>
+              <option value="43">Opción 3</option>
+              <option value="44">Opción 4</option>
+              <option value="45">Opción 5</option>
+              <option value="46">Opción 6</option>
+            </select>
+          </div>
+          <span class="alert-desplegable-govco" id="alert-check-id4">Texto de ayuda</span>
+          <!-- Fin Casillas de verificación - Radio button -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-header">
+          Casillas de verificación - Estado Inválido
+        </div>
+        <div class="card-body mb-5">
+          <!-- Casillas de verificación - Estado Inválido -->
+          <label for="etiqueta" class="label-desplegable-govco">Etiqueta<span aria-required="true">*</span></label>
+          <div class="desplegable-govco" style="width:255px;" id="lista-check2" data-type="check">
+            <select aria-invalid="true" aria-describedby="alert-check-id2" placeholder="Escoger">
+              <option disabled selected>Escoger</option>
+              <option value="21">Opción 1</option>
+              <option value="22">Opción 2</option>
+              <option value="23">Opción 3</option>
+              <option value="24">Opción 4</option>
+              <option value="25">Opción 5</option>
+              <option value="26">Opción 6</option>
+            </select>
+          </div>
+          <span class="alert-desplegable-govco error-desplegable-govco" id="alert-check-id2" role="alert" aria-live="assertive">Texto de ayuda</span>
+          <!-- Fin Casillas de verificación - Estado Inválido -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-header">
+          Calendario
+        </div>
+        <div class="card-body mb-5">
+          <!-- Calendario -->
+          <label for="calendario-govco" class="label-desplegable-govco">Etiqueta<span aria-required="true">*</span></label>
+          <div id="miCalendario" class="desplegable-govco desplegable-calendar-govco" style='width:280px;  height: 40px;' data-type="calendar">
+            <div class="date desplegable-selected-option">
+              <input class="browser-default" type="text" id="calendario-govco" aria-autocomplete="off" days="true">
+            </div>
+          </div>
+          <!-- Fin Calendario -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br>
+  <script src="../../src/form/desplegable.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+@charset "UTF-8";
+/**
+ * Gov.co (https://www.gov.co) - Gobierno de Colombia
+ *  - Componente: Botones
+ *  - Version: 5.0.0
+*/
+
+html {
+  font-size: 100%;
+  /* 100% = 16px */
+}
+
+:root {
+  --govcolor-cobalt: #0943B5;
+  --govcolor-white: #FFFFFF;
+  --govcolor-havelock-lue: #4672C8;
+  --govcolor-tropical-blue: #B5C7E9;
+  --govcolor-black: #000000;
+  --govcolor-silver-dis: #C8C8C8;
+  --govcolor-solitude: #E5ECF8;
+  --govcolor-svg-cobalt: invert(20%) sepia(53%) saturate(3248%) hue-rotate(212deg) brightness(97%) contrast(107%);
+  --govcolor-svg-white: invert(100%) sepia(100%) saturate(2%) hue-rotate(61deg) brightness(103%) contrast(101%);
+  --govcolor-svg-silver-dis: invert(92%) sepia(0%) saturate(0%) hue-rotate(140deg) brightness(91%) contrast(83%);
+  --govcolor-svg-havelock-lue: invert(41%) sepia(68%) saturate(553%) hue-rotate(181deg) brightness(90%) contrast(89%);
+  --govcolor-svg-tropical-blue: invert(81%) sepia(24%) saturate(403%) hue-rotate(187deg) brightness(94%) contrast(93%);
+}
+
+/* Verdana-Regular */
+@font-face {
+  font-family: 'Verdana-Regular';
+  src: url('../assets/fonts/Verdana/static/Verdana-Regular.ttf');
+}
+
+/* Fuente iconografica */
+@font-face {
+  font-family: "govco-fontv5";
+  src: url("../assets/icons/fonts/gov-co-font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.govco-svg {
+  min-width: 1rem;
+  min-height: 1rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+}
+
+.govco-icon::after {
+  font-family: "govco-fontv5";
+}
+
+.govco-icon.govco-arrow-circle-left:after {
+  content: "\e81d";
+}
+
+.govco-icon.govco-arrow-circle-right:after {
+  content: "\e81e";
+}
+
+.govco-svg.govco-arrow-circle-left {
+  background-image: url(../assets/icons/arrow-circle-left.svg);
+}
+
+.govco-svg.govco-arrow-circle-right  {
+  background-image: url(../assets/icons/arrow-circle-right.svg);
+}
+
+.govco-bg-cobalt {
+  background-color: var(--govcolor-cobalt);
+}
+
+/* Botón de texto, simbólico, mixto */
+.btn-govco {
+  border-radius: 1.563rem;
+  font-family: 'Verdana-Regular';
+  font-size: 15px;
+  padding: 0.688rem 0.938rem;
+  border-width: 0.125rem;
+  border-style: solid;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  line-height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-govco.fill-btn-govco,
+.btn-govco.outline-btn-govco {
+  border-color: var(--govcolor-cobalt);
+}
+
+.btn-govco.fill-btn-govco, 
+.btn-govco.outline-secundary-btn-govco {
+  background-color: var(--govcolor-cobalt);
+  color: var(--govcolor-white);
+}
+
+.btn-govco.outline-btn-govco,
+.btn-govco.fill-secundary-btn-govco {
+  background-color: var(--govcolor-white);
+  color: var(--govcolor-cobalt);
+}
+
+.btn-govco.fill-secundary-btn-govco:focus-visible,
+.btn-govco.fill-secundary-btn-govco,
+.btn-govco.outline-secundary-btn-govco {
+  border-color: var(--govcolor-white);
+}
+
+.btn-govco:hover {
+  text-decoration: none;
+}
+
+.btn-govco.fill-btn-govco:hover,
+.btn-govco.fill-btn-govco:focus-visible,
+.btn-govco.outline-btn-govco:hover,
+.btn-govco.outline-btn-govco:focus-visible {
+  background-color: var(--govcolor-havelock-lue);
+  border-color: var(--govcolor-havelock-lue);
+  color: var(--govcolor-white);
+}
+
+.btn-govco.fill-secundary-btn-govco:hover,
+.btn-govco.fill-secundary-btn-govco:focus-visible {
+  background-color: var(--govcolor-tropical-blue);
+  border-color: var(--govcolor-tropical-blue);
+}
+
+.btn-govco.outline-secundary-btn-govco:hover,
+.btn-govco.outline-secundary-btn-govco:focus-visible {
+  background-color: var(--govcolor-tropical-blue);
+  border-color: var(--govcolor-solitude);
+  color: var(--govcolor-cobalt);
+}
+
+.btn-govco.fill-btn-govco:focus-visible,
+.btn-govco.outline-btn-govco:focus-visible,
+.btn-govco.fill-secundary-btn-govco:focus-visible,
+.btn-govco.outline-secundary-btn-govco:focus-visible {
+  outline: max(0.125rem, 0.125rem) solid var(--govcolor-black);
+  outline-offset: max(0.125rem, 0.188rem);
+}
+
+.btn-govco.fill-secundary-btn-govco:focus-visible,
+.btn-govco.outline-secundary-btn-govco:focus-visible {
+  outline-color: var(--govcolor-white);
+}
+
+.btn-govco:disabled,
+.btn-govco.disabled {
+  pointer-events: none;
+}
+
+.btn-govco.fill-btn-govco:disabled,
+.btn-govco.fill-btn-govco.disabled,
+.btn-govco.fill-secundary-btn-govco:disabled,
+.btn-govco.fill-secundary-btn-govco.disabled {
+  background-color: var(--govcolor-silver-dis);
+  border-color: var(--govcolor-silver-dis);
+  color: var(--govcolor-white);
+}
+
+.btn-govco.outline-btn-govco.disabled,
+.btn-govco.outline-btn-govco:disabled {
+  border-color: var(--govcolor-silver-dis);
+  color: var(--govcolor-silver-dis);
+}
+
+.btn-govco.outline-secundary-btn-govco:disabled,
+.btn-govco.outline-secundary-btn-govco.disabled {
+  background-color: var(--govcolor-silver-dis);
+}
+
+/* Botón simbólico y mixto */
+.btn-govco.fill-btn-govco .govco-svg, 
+.btn-govco.outline-secundary-btn-govco .govco-svg,
+.btn-govco.fill-btn-govco:disabled .govco-svg,
+.btn-govco.fill-btn-govco.disabled .govco-svg,
+.btn-govco.fill-secundary-btn-govco:disabled .govco-svg,
+.btn-govco.fill-secundary-btn-govco.disabled .govco-svg {
+  filter: var(--govcolor-svg-white);
+}
+
+.btn-govco.outline-btn-govco .govco-svg,
+.btn-govco.fill-secundary-btn-govco .govco-svg {
+  filter: var(--govcolor-svg-cobalt);
+}
+
+.btn-govco.outline-btn-govco.disabled .govco-svg,
+.btn-govco.outline-btn-govco:disabled .govco-svg {
+  filter: var(--govcolor-svg-silver-dis);
+}
+
+/* Botón simbólico */
+.btn-govco.only-icon-btn-govco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.btn-govco.only-icon-btn-govco .govco-svg {
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  background-size: 1.25rem 1.25rem;
+}
+
+/* Botón mixto */
+.btn-govco.icon-btn-govco {
+  font-size: 15px;
+  padding: 0.313rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.btn-govco.icon-btn-govco span,
+.btn-govco.icon-btn-govco .govco-icon,
+.btn-govco.icon-btn-govco .govco-svg {
+  display: inline-block;
+}
+
+.btn-govco.icon-btn-govco .govco-icon,
+.btn-govco.link-btn-govco .govco-icon,
+.btn-govco.fill-link-btn-govco .govco-icon,
+.btn-govco.icon-btn-govco .govco-svg,
+.btn-govco.link-btn-govco .govco-svg,
+.btn-govco.fill-link-btn-govco .govco-svg {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 1.5rem 1.5rem;
+}
+
+.btn-govco.link-btn-govco .govco-icon,
+.btn-govco.fill-link-btn-govco .govco-icon,
+.btn-govco.link-btn-govco .govco-svg,
+.btn-govco.fill-link-btn-govco .govco-svg {
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  background-size: 1.25rem 1.25rem;
+}
+
+.btn-govco.icon-btn-govco span:not(.govco-icon):not(.govco-svg),
+.btn-govco.link-btn-govco span:not(.govco-icon):not(.govco-svg),
+.btn-govco.fill-link-btn-govco span:not(.govco-icon):not(.govco-svg) {
+  width: 100%;
+}
+
+.btn-govco.icon-btn-govco .govco-icon::after {
+  font-size: 24px;
+}
+
+.btn-govco.link-btn-govco .govco-icon::after,
+.btn-govco.fill-link-btn-govco .govco-icon::after {
+  font-size: 20px;
+}
+
+.btn-govco.link-btn-govco,
+.btn-govco.fill-link-btn-govco {
+  padding: 0.375rem 0.688rem 0.375rem 0.375rem;
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+  color: var(--govcolor-cobalt);
+  text-align: start;
+}
+
+.btn-govco.link-btn-govco .govco-svg {
+  filter: var(--govcolor-svg-cobalt);
+}
+
+.btn-govco.fill-link-btn-govco {
+  color: var(--govcolor-white);
+}
+
+.btn-govco.fill-link-btn-govco .govco-svg {
+  filter: var(--govcolor-svg-white);
+}
+
+.btn-govco.link-btn-govco span:first-child,
+.btn-govco.fill-link-btn-govco span:first-child {
+  text-align: end;
+}
+
+.btn-govco.link-btn-govco span:not(.govco-icon):not(.govco-svg),
+.btn-govco.fill-link-btn-govco span:not(.govco-icon):not(.govco-svg) {
+  text-decoration: underline;
+}
+
+.btn-govco.icon-btn-govco.outline-btn-govco:hover,
+.btn-govco.icon-btn-govco.outline-btn-govco:focus-visible {
+  background-color: var(--govcolor-white);
+  color: var(--govcolor-havelock-lue);
+}
+
+.btn-govco.icon-btn-govco.outline-btn-govco:hover .govco-svg,
+.btn-govco.icon-btn-govco.outline-btn-govco:focus-visible .govco-svg {
+  filter: var(--govcolor-svg-havelock-lue);
+}
+
+.btn-govco.outline-secundary-btn-govco:hover .govco-svg,
+.btn-govco.outline-secundary-btn-govco:focus-visible .govco-svg {
+  filter: var(--govcolor-svg-cobalt);
+}
+
+.btn-govco.link-btn-govco:hover,
+.btn-govco.link-btn-govco:focus-visible {
+  color: var(--govcolor-havelock-lue);
+}
+
+.btn-govco.link-btn-govco:hover .govco-svg,
+.btn-govco.link-btn-govco:focus-visible .govco-svg {
+  filter: var(--govcolor-svg-havelock-lue);
+}
+
+.btn-govco.fill-link-btn-govco:hover,
+.btn-govco.fill-link-btn-govco:focus-visible {
+  color: var(--govcolor-tropical-blue);
+}
+
+.btn-govco.fill-link-btn-govco:hover .govco-svg,
+.btn-govco.fill-link-btn-govco:focus-visible .govco-svg {
+  filter: var(--govcolor-svg-tropical-blue);
+}
+
+.btn-govco.link-btn-govco:focus-visible {
+  outline: max(0.125rem, 0.125rem) solid var(--govcolor-black);
+}
+
+.btn-govco.fill-link-btn-govco:focus-visible {
+  outline: max(0.125rem, 0.125rem) solid var(--govcolor-white);
+}
+
+.btn-govco.link-btn-govco:disabled,
+.btn-govco.link-btn-govco.disabled,
+.btn-govco.fill-link-btn-govco:disabled,
+.btn-govco.fill-link-btn-govco.disabled {
+  color: var(--govcolor-silver-dis);
+}
+
+.btn-govco.link-btn-govco:disabled .govco-svg,
+.btn-govco.link-btn-govco.disabled .govco-svg,
+.btn-govco.fill-link-btn-govco:disabled .govco-svg,
+.btn-govco.fill-link-btn-govco.disabled .govco-svg {
+  filter: var(--govcolor-svg-silver-dis);
+}

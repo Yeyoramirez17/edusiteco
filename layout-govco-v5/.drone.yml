@@ -1,0 +1,193 @@
+kind: pipeline
+name: and_ci_cliente
+
+steps:
+# - name: check_readme
+#   image: jjvargass/qa_develoment:latest
+#   commands:
+#   - python /app/check_readme.py
+#   when:
+#     branch:
+#     - develop
+#     - release/*
+#     event:
+#     - push
+
+# - name: check_branch
+#   image: jjvargass/qa_develoment:latest
+#   commands:
+#   - python /app/check_branch.py -H ${DRONE_GIT_HTTP_URL}
+#   when:
+#     branch:
+#     - develop
+#     - release/*
+#     event:
+#     - push
+
+# - name: check_commits
+#   image: jjvargass/qa_develoment:latest
+#   commands:
+#   - python /app/check_commits.py
+#   when:
+#     branch:
+#     - develop
+#     - release/*
+#     event:
+#     - push
+
+- name: run_sonar_scanner
+  image: timbru31/java-node
+  commands:
+    - export RELEASE=4.2.0.1873
+    - cat /etc/os-release
+    - apt-get update -y
+    - apt-get -y install curl grep sed unzip zip nodejs apt-utils
+    - node --version
+    - npm --version
+    - curl --insecure -o ./sonarscanner.zip -L https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$RELEASE-linux.zip
+    - unzip sonarscanner.zip
+    - rm sonarscanner.zip
+    - rm -rf sonar-scanner-$RELEASE-linux/jre
+    - sed -i 's/use_embedded_jre=true/use_embedded_jre=false/g' ./sonar-scanner-$RELEASE-linux/bin/sonar-scanner
+    - cp sonar-project.properties ./sonar-scanner-$RELEASE-linux/conf/sonar-scanner.properties
+    - sonar-scanner-$RELEASE-linux/bin/sonar-scanner -X
+  when:
+    branch:
+    - develop
+    - release/*
+    event:
+    - push
+    - merge
+
+- name: compress_tar_build_DEV
+  image: alpine
+  commands:
+  - cd src/
+  - tar -czvf layout-govco-v5.tar.gz .
+  when:
+    branch:
+    - develop
+    event:
+    - push
+    - merge
+
+- name: compress_tar_build_QA
+  image: alpine
+  commands:
+  - cd src/
+  - tar -czvf layout-govco-v5.tar.gz .
+  when:
+    branch:
+    - stage
+    event:
+    - push
+    - merge
+
+
+- name: scp_to_server_develop
+  image: appleboy/drone-scp
+  settings:
+    host:
+      from_secret: SERVER_DEVELOP
+    user:
+      from_secret: USER_SERVER_DEVELOP
+    key:
+      from_secret: SSH_KEY
+    target: /govco/services/proxy-reverso/src/layout-govco-v5/
+    source: src/*.tar.gz
+    strip_components: 1
+  when:
+    branch:
+    - develop
+    event:
+    - push
+    - merge
+
+- name: scp_to_server_stage
+  image: appleboy/drone-scp
+  settings:
+    host:
+      from_secret: SERVER_STAGE
+    user:
+      from_secret: USER_SERVER_STAGE
+    key:
+      from_secret: SSH_KEY_STAGE
+    target: /govco/services/proxy-reverso/src/layout-govco-v5/
+    source: src/*.tar.gz
+    strip_components: 1
+  when:
+    branch:
+    - stage
+    event:
+    - push
+    - merge    
+
+- name: ssh_to_server_develop
+  image: appleboy/drone-ssh
+  settings:
+    host:
+      from_secret: SERVER_DEVELOP
+    username:
+      from_secret: USER_SERVER_DEVELOP
+    key:
+      from_secret: SSH_KEY
+    script:
+      - cd /govco/services/proxy-reverso/src/layout-govco-v5/
+      - tar -xzvf layout-govco-v5.tar.gz
+      - rm *.tar.gz
+  when:
+    branch:
+    - develop
+    event:
+    - push
+    - merge
+
+- name: ssh_to_server_stage
+  image: appleboy/drone-ssh
+  settings:
+    host:
+      from_secret: SERVER_STAGE
+    username:
+      from_secret: USER_SERVER_STAGE
+    key:
+      from_secret: SSH_KEY_STAGE
+    script:
+      - cd /govco/services/proxy-reverso/src/layout-govco-v5/
+      - tar -xzvf layout-govco-v5.tar.gz
+      - rm *.tar.gz
+  when:
+    branch:
+    - stage
+    event:
+    - push
+    - merge
+
+- name: slack_notify
+  image: plugins/slack
+  settings:
+    webhook:
+      from_secret: SLACK_AND_WEBHOOK
+    channel: despliegue-continuo
+    link_names: true
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}✔{{ else }}✘{{/success}} {{ uppercasefirst build.status }}*: <https://gitlab.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}✔{{ else }}✘{{/success}} {{ uppercasefirst build.status }}: Build #{{ build.number }}* (type: `{{ build.event }}`)
+      {{/if}}
+      *Repo:* {{ repo.name }}
+      *Branch:* <http://https://gitlab.com/govco-developers/{{ repo.owner }}/repos/{{ repo.name }}/commits?until=refs/heads/{{ build.branch }}&merges=include|{{ build.branch }}>
+      *Commit:* <http://https://gitlab.com/govco-developers/{{ repo.owner }}/repos/{{ repo.name }}/commits/{{ build.commit }}|{{ truncate build.commit 8 }}>
+
+      Author: {{ build.author }}
+
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    branch:
+    - develop
+    - release/*
+    - master
+    - stage
+    status:
+    - failure
+    - success

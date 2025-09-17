@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=+, initial-scale=1.0">
+  <title>Entradas de texto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet"
+    crossorigin="anonymous">
+  <link href="../../src/form/entradas-de-texto.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <!-- Básico -->
+  <div class="entradas-de-texto-govco">
+    <label for="input-basico-id">Etiqueta*</label>
+    <input type="text" id="input-basico-id" placeholder="Ejemplo: Campo de texto"/>
+  </div>
+
+  <!-- Con contador -->
+  <div class="entradas-de-texto-govco">
+    <label for="input-contador-id">Etiqueta*</label>
+    <input type="text" id="input-contador-id" aria-describedby="contador max-lenght" placeholder="Ejemplo: Campo de texto" maxlength="20" typeData="accountant"/>
+
+    <span class="visually-hidden-focusable info-entradas-de-texto-govco" id="max-lenght">Caracteres permitidos:20</span>
+    <div class="counter-entradas-de-texto-govco" id="contador" role="status">
+      <span class="number-entradas-de-texto-govco">0</span>
+      <span> de 20</span>
+    </div>
+  </div>
+
+  <!-- Con nota -->
+  <div class="entradas-de-texto-govco">
+    <label for="input-nota-id">Etiqueta*</label>
+    <input type="text" id="input-nota-id" aria-describedby="campo-nota" placeholder="Ejemplo: Campo de texto"/>
+    <span id="campo-nota" class="info-entradas-de-texto-govco">Nota explicativa del funcionamiento</span>
+  </div>
+
+  <!-- De contraseña -->
+  <div class="entradas-de-texto-govco">
+    <label for="input-contrasenia-id">Etiqueta*</label>
+    <div class="container-input-texto-govco">
+      <input type="password" id="input-contrasenia-id" aria-describedby="nota-contrasenia" aria-invalid="false" placeholder="Ejemplo: Campo de texto" minlength="8" typeData="password"/>
+      <button class="icon-entradas-de-texto-govco eye-entradas-de-texto-govco none" aria-label="Ocultar contraseña"></button>   
+      <button class="icon-entradas-de-texto-govco eye-slash-entradas-de-texto-govco" aria-label="Mostrar contraseña"></button>
+    </div>
+    <span class="info-entradas-de-texto-govco alert-entradas-de-texto-govco" id="nota-contrasenia">Mínimo ocho (8) caracteres, un número, una letra minúscula, una letra mayúscula, un carácter especial.</span>
+  </div>
+
+  <!-- Correo electronico -->
+  <div class="entradas-de-texto-govco">
+    <label for="input-correo-id">Etiqueta*</label>
+    <div class="container-input-texto-govco">
+      <input type="mail" id="input-correo-id" aria-invalid="false" placeholder="Ej: correo@email.com" typeData="mail"/>
+      <div class="icon-entradas-de-texto-govco success-icon-entradas-de-texto-govco" aria-label="success" aria-hidden="true"></div>      
+      <div class="icon-entradas-de-texto-govco error-icon-entradas-de-texto-govco" aria-label="error" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Teléfono -->
+  <div class="entradas-de-texto-govco">
+    <label for="input-telefon-id">Etiqueta*</label>
+    <div class="container-input-texto-govco">
+      <input type="tel" id="input-telefon-id" aria-invalid="false" placeholder="Ej: +57 310 4021752" typeData="phone"/>
+      <div class="icon-entradas-de-texto-govco success-icon-entradas-de-texto-govco" aria-label="success" aria-hidden="true"></div>      
+      <div class="icon-entradas-de-texto-govco error-icon-entradas-de-texto-govco" aria-label="error" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Validaciones -->
+  <div class="entradas-de-texto-govco">
+    <label for="input-success-id">Etiqueta*</label>
+    <div class="container-input-texto-govco">
+      <input type="text" class="success" id="input-success-id" aria-invalid="false" aria-describedby="campoSuccess-id" placeholder="Ejemplo: Campo de texto" value="Texto ingresado"/>
+      <div class="icon-entradas-de-texto-govco success-icon-entradas-de-texto-govco" aria-label="success" aria-hidden="true"></div>      
+      <div class="icon-entradas-de-texto-govco error-icon-entradas-de-texto-govco" aria-label="error" aria-hidden="true"></div>
+    </div>
+    <span class="success-texto-govco alert-entradas-de-texto-govco" id="campoSuccess-id" role="status" aria-live="polite">Texto que explica el éxito</span>
+  </div>
+  
+  <div class="entradas-de-texto-govco">
+    <label for="input-error-id">Etiqueta*</label>
+    <div class="container-input-texto-govco">
+      <input type="text" class="error" id="input-error-id" aria-invalid="true" aria-describedby="campoWarning-id"  placeholder="Ejemplo: Campo de texto" value="Texto ingresado"/>
+      <div class="icon-entradas-de-texto-govco success-icon-entradas-de-texto-govco" aria-label="success" aria-hidden="true"></div>      
+      <div class="icon-entradas-de-texto-govco error-icon-entradas-de-texto-govco" aria-label="error" aria-hidden="true"></div>
+    </div>
+    <span class="error-texto-govco alert-entradas-de-texto-govco" id="campoWarning-id" role="alert" aria-live="assertive">Texto que explica el error</span>
+  </div>
+
+  <script src="../../src/form/entradas-de-texto.js"></script>
+</body>
+</html>

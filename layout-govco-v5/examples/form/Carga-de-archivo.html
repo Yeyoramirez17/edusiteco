@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carga de Archivo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet"
+    crossorigin="anonymous">
+  <link href="../../src/form/carga-archivos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="card">
+    <div class="card-header">
+      <strong>Ejemplo de Carga de archivo</strong>
+    </div>
+    <div class="card-body p-4">
+      <!-- carga de archivo -->
+      <div class="carga-archivo-govco">
+        <div class="loader-carga-archivo-govco">
+          <div class="all-input-carga-archivo-govco">
+            <input type="file" id="inputId" name="inputFile" class="input-carga-archivo-govco active"
+              data-error="false" data-action="uploadFile" data-action-delete="deleteFile" multiple/>
+            <label for="inputFile" class="label-carga-archivo-govco">Etiqueta*</label>
+            <label for="inputFile" class="container-input-carga-archivo-govco">
+              <span class="button-file-carga-archivo-govco">Seleccionar archivo</span>
+              <span class="file-name-carga-archivo-govco">Sin archivo seleccionado</span>
+            </label>
+            <span class="text-validation-carga-archivo-govco">
+              <span>Cualquier tipo de archivo.</span> 
+              <span>Peso máximo: 2 MB</span>
+          </span>
+          </div>
+          <div class="load-button-carga-archivo-govco">
+            <div class="load-carga-archivo-govco">
+              <!-- indicador de carga -->
+              <div class="spinner-indicador-de-carga-govco" role="status">
+                <span class="visually-hidden">Cargando...</span>
+              </div>
+              <!-- end indicador de carga -->
+            </div>
+            <button class="button-loader-carga-archivo-govco inactive">Cargar archivo</button>
+          </div>
+        </div>
+
+        <div class="container-detail-carga-archivo-govco">
+          <span class="alert-carga-archivo-govco visually-hidden"></span>
+          <div class="attached-files-carga-archivo-govco"></div>
+        </div>
+      </div>
+      <!-- end carga de archivo -->
+    </div>
+  </div>
+
+  <script src="../../src/form/carga-archivos.js"></script>
+</body>
+
+</html>

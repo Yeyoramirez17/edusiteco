@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=+, initial-scale=1.0" />
+  <title>Alerta Modal</title>
+  <link href="../../src/general/alerta-modal.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet"
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container shadow min-vh-50 py-2">
+    <div class="container modal_wrapper col-sm p-2">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Alerta Modal</h5>
+          <ul class="nav nav-tabs card-header-tabs" data-bs-tabs="tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="true" data-bs-toggle="tab" href="#basic">Básico</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#confirmation">Confirmación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#success">Éxito</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#error">Error</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#warning">Advertencia</a>
+            </li>
+          </ul>
+        </div>
+        <form class="card-body tab-content">
+          <div class="tab-pane active" id="basic">
+            <!-- Alerta Modal Basico-->
+            <div class="container-modal-govco" id="modal_basico" style="display: none">
+              <div class="modal-container-govco" id="exampleModalBasic" tabindex="-1" data-bs-backdrop="false"
+                data-bs-keyboard="false" aria-labelledby="exampleModalBasic" aria-hidden="true" aria-hidden="true"
+                role="dialog">
+                <div class="modal-dialog modal-dialog-govco">
+                  <div class="modal-content modal-content-govco">
+                    <div class="modal-header modal-header-govco">
+                      <a href="javascript:void(0)" role="button" data-bs-dismiss="modal" class="close-btn-modal"
+                        aria-label="Close" aria-expanded="false" onclick="closeModal('modal_basico')">
+                        <span class="modal-close-govco govco-times"></span>
+                      </a>
+                    </div>
+                    <div class="modal-body modal-body-govco">
+                      <h3 class="modal-title-govco">Título</h3>
+                      <h3 class="modal-subtitle-govco">Subtítulo</h3>
+                      <p class="modal-text-govco">
+                        Texto texto Texto texto Texto texto Texto texto Texto
+                        texto Texto texto Texto texto Texto texto Texto texto
+                        Texto texto Texto texto Texto texto Texto texto Texto
+                        texto Texto texto
+                      </p>
+                    </div>
+                    <div class="modal-footer-govco">
+                      <div class="modal-buttons-govco">
+                        <button type="button" class="btn btn-primary btn-modal-govco">
+                          Botón
+                        </button>
+                        <button type="button" class="btn btn-primary btn-modal-govco btn-contorno">
+                          Botón
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="confirmation">
+            <!-- Alerta Modal Confirmación-->
+            <div class="container-modal-govco" id="modal_confirmacion" style="display: none">
+              <div class="modal-container-govco" id="exampleModalConfirmacion" tabindex="-1" data-bs-backdrop="false"
+                data-bs-keyboard="false" aria-labelledby="exampleModalConfirmacion" aria-hidden="true"
+                aria-hidden="true" role="dialog">
+                <div class="modal-dialog modal-dialog-govco">
+                  <div class="modal-content modal-content-govco">
+                    <div class="modal-header modal-header-govco modal-header-alerts-govco">
+                      <button type="button" disabled class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal-body-govco center-elements-govco">
+                      <div class="modal-icon">
+                        <span class="modal-icon-govco modal-confirmation-icon"></span>
+                      </div>
+                      <h3 class="modal-title-govco confirmation-govco">
+                        Título de la alerta
+                      </h3>
+                      <p class="modal-text-govco modal-text-center-govco">
+                        Información de detalle al cierre de la acción
+                      </p>
+                    </div>
+                    <div class="modal-footer-govco modal-footer-alerts-govco">
+                      <div class="modal-buttons-govco">
+                        <button type="button" class="btn btn-primary btn-modal-govco">
+                          Botón
+                        </button>
+                        <button type="button" class="btn btn-primary btn-modal-govco btn-contorno">
+                          Botón
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="success">
+            <!-- Alerta Modal Éxito -->
+            <div class="container-modal-govco" id="modal_exito" style="display: none">
+              <div class="modal-container-govco" id="exampleModalExito" tabindex="-1" data-bs-backdrop="false"
+                data-bs-keyboard="false" aria-labelledby="exampleModalExito" aria-hidden="true" aria-hidden="true"
+                role="dialog">
+                <div class="modal-dialog modal-dialog-govco">
+                  <div class="modal-content modal-content-govco">
+                    <div class="modal-header modal-header-govco modal-header-alerts-govco">
+                      <button type="button" disabled class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal-body-govco center-elements-govco">
+                      <div class="modal-icon">
+                        <span class="modal-icon-govco modal-success-icon"></span>
+                      </div>
+                      <h3 class="modal-title-govco success-govco">
+                        Título de la alerta
+                      </h3>
+                      <p class="modal-text-govco modal-text-center-govco">
+                        Información de detalle al cierre de la acción
+                      </p>
+                    </div>
+                    <div class="modal-footer-govco modal-footer-alerts-govco">
+                      <div class="modal-buttons-govco">
+                        <button type="button" class="btn btn-primary btn-modal-govco">
+                          Botón
+                        </button>
+                        <button type="button" class="btn btn-primary btn-modal-govco btn-contorno">
+                          Botón
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="error">
+            <!-- Alerta Modal Error -->
+            <div class="container-modal-govco" id="modal_error" style="display: none">
+              <div class="modal-container-govco" id="exampleModalError" tabindex="-1" data-bs-backdrop="false"
+                data-bs-keyboard="false" aria-labelledby="exampleModalError" aria-hidden="true" aria-hidden="true"
+                role="dialog">
+                <div class="modal-dialog modal-dialog-govco">
+                  <div class="modal-content modal-content-govco">
+                    <div class="modal-header modal-header-govco modal-header-alerts-govco">
+                      <button type="button" disabled class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal-body-govco center-elements-govco">
+                      <div class="modal-icon">
+                        <span class="modal-icon-govco modal-error-icon"></span>
+                      </div>
+                      <h3 class="modal-title-govco error-govco">
+                        Título de la alerta
+                      </h3>
+                      <p class="modal-text-govco modal-text-center-govco">
+                        Información de detalle al cierre de la acción
+                      </p>
+                    </div>
+                    <div class="modal-footer-govco modal-footer-alerts-govco">
+                      <div class="modal-buttons-govco">
+                        <button type="button" class="btn btn-primary btn-modal-govco">
+                          Botón
+                        </button>
+                        <button type="button" class="btn btn-primary btn-modal-govco btn-contorno">
+                          Botón
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="warning">
+            <!-- Alerta Modal Warning -->
+            <div class="container-modal-govco" id="modal_warning" style="display: none">
+              <div class="modal-container-govco" id="exampleModalWarning" tabindex="-1" data-bs-backdrop="false"
+                data-bs-keyboard="false" aria-labelledby="exampleModalAdvertencia" aria-hidden="true" aria-hidden="true"
+                role="dialog">
+                <div class="modal-dialog modal-dialog-govco">
+                  <div class="modal-content modal-content-govco">
+                    <div class="modal-header modal-header-govco modal-header-alerts-govco">
+                      <button type="button" disabled class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal-body-govco center-elements-govco">
+                      <div class="modal-icon">
+                        <span class="modal-icon-govco modal-warning-icon"></span>
+                      </div>
+                      <h3 class="modal-title-govco warning-govco">
+                        Título de la alerta
+                      </h3>
+                      <p class="modal-text-govco modal-text-center-govco">
+                        Información de detalle al cierre de la acción
+                      </p>
+                    </div>
+                    <div class="modal-footer-govco modal-footer-alerts-govco">
+                      <div class="modal-buttons-govco">
+                        <button type="button" class="btn btn-primary btn-modal-govco">
+                          Botón
+                        </button>
+                        <button type="button" class="btn btn-primary btn-modal-govco btn-contorno">
+                          Botón
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="../../src/general/alerta-modal.js"></script>
+</body>
+
+</html>

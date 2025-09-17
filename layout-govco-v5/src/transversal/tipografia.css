@@ -1,0 +1,219 @@
+@charset "UTF-8";
+/**
+ * Gov.co (https://www.gov.co) - Gobierno de Colombia
+ *  - Componente: Tipografía
+ *  - Version: 5.0.0
+*/
+
+html {
+  font-size: 100%;
+  /* 100% = 16px */
+}
+
+:root {
+    --govcolor-cobalt: #0943B5;
+    --govcolor-matterhorn: #4C4C4C;
+    --govcolor-havelock-lue: #4672C8;
+    --govcolor-silver-dis: #C8C8C8;
+}
+
+/* Nunito_Sans-Regular */
+@font-face {
+    font-family: 'Nunito_Sans-Regular';
+    src: url('../assets/fonts/Nunito_Sans/static/NunitoSans-Regular.ttf');
+}
+
+/* Nunito_Sans-Bold */
+@font-face {
+    font-family: 'Nunito_Sans-Bold';
+    src: url('../assets/fonts/Nunito_Sans/static/NunitoSans-Bold.ttf');
+}
+
+/* Nunito_Sans-SemiBold */
+@font-face {
+    font-family: 'Nunito_Sans-SemiBold';
+    src: url('../assets/fonts/Nunito_Sans/static/NunitoSans-SemiBold.ttf');
+}
+
+/* NunitoSans-ExtraBold */
+@font-face {
+  font-family: 'NunitoSans-ExtraBold';
+  src: url('../assets/fonts/Nunito_Sans/static/NunitoSans-ExtraBold.ttf');
+}
+
+/* Nunito_Sans-SemiBoldItalic */
+@font-face {
+    font-family: 'Nunito_Sans-SemiBoldItalic';
+    src: url('../assets/fonts/Nunito_Sans/static/NunitoSans-SemiBoldItalic.ttf');
+}
+
+/* Nunito_Sans-Medium */
+@font-face {
+    font-family: 'Nunito_Sans-Medium';
+    src: url('../assets/fonts/Nunito_Sans/static/NunitoSans-Medium.ttf');
+}
+
+/* Nunito_Sans-Italic */
+@font-face {
+    font-family: 'Nunito_Sans-Italic';
+    src: url('../assets/fonts/Nunito_Sans/static/NunitoSans-Italic.ttf');
+}
+
+/* Verdana-Regular */
+@font-face {
+    font-family: 'Verdana-Regular';
+    src: url('../assets/fonts/Verdana/static/Verdana-Regular.ttf');
+}
+
+/* Verdana-Bold */
+@font-face {
+    font-family: 'Verdana-Bold';
+    src: url('../assets/fonts/Verdana/static/Verdana-Bold.ttf');
+}
+
+/* Verdana-Italic */
+@font-face {
+    font-family: 'Verdana-Italic';
+    src: url('../assets/fonts/Verdana/static/Verdana-Italic.ttf');
+}
+
+/* Verdana-BoldItalic */
+@font-face {
+    font-family: 'Verdana-BoldItalic';
+    src: url('../assets/fonts/Verdana/static/Verdana-BoldItalic.ttf');
+}
+
+html {
+    font-family: 'Nunito_Sans-Regular';
+    font-size: 100%;
+    /* 100% = 16px */
+}
+
+h1 {
+    font-family: 'Nunito_Sans-Bold';
+    font-size: 42px;
+}
+
+h2 {
+    font-family: 'Nunito_Sans-Bold';
+    font-size: 34px;
+}
+
+h3 {
+    font-family: 'Nunito_Sans-Bold';
+    font-size: 26px;
+}
+
+h4 {
+    font-family: 'Nunito_Sans-Bold';
+    font-size: 22px;
+}
+
+h5 {
+    font-family: 'Nunito_Sans-Bold';
+    font-size: 20px;
+}
+
+h6 {
+    font-family: 'Nunito_Sans-Bold';
+    font-size: 16px;
+}
+
+.text1-govco {
+    font-family: 'Nunito_Sans-SemiBold';
+    font-size: 20px;
+}
+
+.text2-govco {
+    font-family: 'Verdana-Regular';
+    font-size: 15px;
+}
+
+.text3-govco {
+    font-family: 'Verdana-Regular';
+    font-size: 14px;
+}
+
+.bold-govco {
+    font-family: 'Nunito_Sans-Bold';
+}
+
+.bold-verdana-govco {
+    font-family: 'Verdana-Bold';
+}
+
+.SemiBoldItalic-govco {
+    font-family: 'Nunito_Sans-SemiBoldItalic';
+}
+
+.link-tipografia-govco {
+    font-family: 'Verdana-Regular';
+    color: var(--govcolor-cobalt);
+    line-height: 1.375rem;
+    font-size: 15px;
+}
+
+.link-tipografia-govco:hover {
+    color: var(--govcolor-havelock-lue);
+}
+
+.link-tipografia-govco:focus-visible {
+    color: var(--govcolor-cobalt);
+    outline: max(0.125rem, 0.125rem) solid var(--govcolor-matterhorn);
+    outline-offset: max(0.313rem, 0.313rem);
+    border-radius: 1.875rem;
+    padding: 0 5px 0 5px;
+}
+
+.link-tipografia-govco:visited {
+    color: var(--govcolor-matterhorn);
+}
+
+.link-tipografia-govco[aria-disabled="true"] {
+    color: var(--govcolor-silver-dis);
+    pointer-events: none;
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-family: 'Nunito_Sans-Bold';
+        font-size: 34px;
+    }
+
+    h2 {
+        font-family: 'Nunito_Sans-Bold';
+        font-size: 26px;
+    }
+
+    h3 {
+        font-family: 'Nunito_Sans-Bold';
+        font-size: 22px;
+    }
+
+    h4 {
+        font-family: 'Nunito_Sans-Bold';
+        font-size: 20px;
+    }
+
+    h5 {
+        font-family: 'Nunito_Sans-Bold';
+        font-size: 18px;
+    }
+
+    h6 {
+        font-family: 'Nunito_Sans-Bold';
+        font-size: 16px;
+    }
+
+    .text1-govco {
+        font-size: 18px;
+    }
+
+    .text2-govco {
+        font-size: 14px;
+    }
+
+    .text3-govco {
+        font-size: 12px;
+    }
+}

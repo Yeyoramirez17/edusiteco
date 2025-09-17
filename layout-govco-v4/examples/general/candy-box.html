@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=+, initial-scale=1.0" />
+    <title>Galeria de Aplicaciones</title>
+    <link href="../../src/general/candy-box.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet"
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="row justify-content-md-center mt-3">
+        <div class="dropdown-container-govco">
+            <div class="dropdown dropdown-candy-box-govco">
+                <button class="btn btn-primary button-rounded-menu-govco" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="dropdown-arrow-govco"></div>
+                    <span class="tooltip-text-govco">Acceda a Carpeta Ciudadana Digital y
+                        demás servicios relacionados con el Portal Único del Estado Colombiano.</span>
+                </button>
+                <div class="dropdown-arrow-govco"></div>
+                <div class="dropdown-menu dropdown-menu-candy-box-govco" aria-labelledby="dropdownMenuButton1">
+                    <span class="dropdown-title dropdown-title-govco" id="dropdown-title-id-govco">
+                        Aplicaciones y servicios GOV.CO
+                    </span>
+                    <ul class="dropdown-item-menu-ul">
+                        <li class="dropdown-item-menu-li">
+                            <a class="dropdown-item dropdown-item-govco" id='govco-govco' href="javascript:void(0)"
+                                onclick="activeItemCandy('govco-govco')">
+                                <span class="item-active-icon-background-govco"></span>
+                                <span class="item-active-icon-govco"></span>
+                                <div class="dropdown-item-icon-govco"><span class="icon-govco-govco"></span></div>
+                                <span>Portal GOV.CO</span>
+                            </a>
+                        </li>
+                        <li class="dropdown-item-menu-li">
+                            <a class="dropdown-item dropdown-item-govco" id='folder-user' href="javascript:void(0)"
+                                onclick="activeItemCandy('folder-user')">
+                                <span class="item-active-icon-background-govco"></span>
+                                <span class="item-active-icon-govco"></span>
+                                <div class="dropdown-item-icon-govco"><span class="icon-folder-user-govco"></span>
+                                </div>
+                                <span>Carpeta Ciudadana</span>
+                            </a>
+                        </li>
+                        <li class="dropdown-item-menu-li">
+                            <a class="dropdown-item dropdown-item-govco" id='ciiu-govco' href="javascript:void(0)"
+                                onclick="activeItemCandy('ciiu-govco')">
+                                <span class="item-active-icon-background-govco"></span>
+                                <span class="item-active-icon-govco"></span>
+                                <div class="dropdown-item-icon-govco"><span class="icon-ciiu-govco"></span></div>
+                                <span>Consulta CIIU</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="../../src/general/candy-box.js"></script>
+</body>
+
+</html>

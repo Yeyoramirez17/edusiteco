@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>Barra accesibilidad</title>
+    <LINK href="../../src/transversal/barra-accesibilidad.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet"
+        crossorigin="anonymous">
+</head>
+
+<body>
+<div class="content-example-barra">
+    <div class="barra-accesibilidad-govco">
+        <button id="botoncontraste" class="icon-contraste" onclick="cambiarContexto()">
+            <span id="titlecontraste">Contraste</span>
+        </button>
+        <button id="botondisminuir" class="icon-reducir" onclick="disminuirTamanio('disminuir')">
+            <span id="titledisminuir">Reducir letra</span>
+        </button>
+        <button id="botonaumentar" class="icon-aumentar" onclick="aumentarTamanio('aumentar')">
+            <span id="titleaumentar">Aumentar letra</span>
+        </button>
+    </div>
+    <div class="row m-5">
+        <div id="para-mirar" class="barra-accesibilidad-letra" >
+            <br>
+            <p class="titulo-barra-accesibilidad">&nbsp;Ejemplo barra de accesibilidad</p>
+            <p class="descripcion-barra-accesibilidad">Descripción para ver el tamaño de la letra</p>
+        </div>
+    </div>
+</div>
+<script src="../../src/transversal/barra-accesibilidad.js"></script>
+</body>
+
+</html>

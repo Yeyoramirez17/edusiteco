@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=+, initial-scale=1.0"/>
+  <title>Etiquetas</title>
+  <link href="../../src/general/etiqueta.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+  <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+  <div>
+    <div class="m-3 p-2">
+      <span class="etiqueta-govco">
+        Etiqueta informativa
+      </span>
+    </div>
+    <div class="m-3 p-2">
+      <span class="etiqueta-govco completado">
+        Etiqueta de estado
+      </span>
+    </div>
+    <div class="m-3 p-2">
+      <span class="etiqueta-govco error">
+        Etiqueta de estado
+      </span>
+    </div>
+    <div class="m-3 p-2">
+      <span class="etiqueta-govco pendiente">
+        Etiqueta de estado
+      </span>
+    </div>
+    <div class="m-3 p-2">
+      <div id="nombre_etiqueta" class="campo-etiqueta-govco">
+        <a href="#" class="etiqueta-govco-filtro" onclick="cerraretiqueta('nombre_etiqueta')">
+          Etiqueta de filtro &nbsp;
+        </a>
+      </div>
+    </div>
+  </div>
+
+ 
+  <script src="../../src/general/etiqueta.js"></script>
+</body>
+
+</html>

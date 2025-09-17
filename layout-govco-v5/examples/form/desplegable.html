@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=+, initial-scale=1.0">
+  <title>Desplegable</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet"
+    crossorigin="anonymous">
+  <link href="../../src/form/desplegable.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="d-flex flex-row gap-4 flex-wrap m-3">
+    <div class="card">
+      <div class="card-header">
+        Lista
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="dropdown desplegable-govco">
+          <label for="dropdown1">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input type="hidden" value="" aria-invalid="false" aria-describedby="alert-id">
+            <button class="btn-dropdown" type="button" id="dropdown1" data-bs-toggle="dropdown" aria-expanded="false">
+              Escoger
+            </button>
+            <div class="input-group icons-dropdown">
+              <span class="input-group-text govco-icon govco-angle-down"></span>
+            </div>          
+            <div class="dropdown-menu dropdown-options-govco" aria-labelledby="dropdown1">
+              <ul>
+                <li tabindex="0" class="dropdown-item" data-value="1">Opción 1</li>
+                <li tabindex="0" class="dropdown-item" data-value="2">Opción 2</li>
+                <li tabindex="0" class="dropdown-item" data-value="3">Opción 3</li>
+                <li tabindex="0" class="dropdown-item" data-value="4">Opción 4</li>
+                <li tabindex="0" class="dropdown-item" data-value="5">Opción 5</li>
+                <li tabindex="0" class="dropdown-item" data-value="6">Opción 6</li>
+              </ul>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id">Texto de ayuda</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Lista - Opción seleccionada
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="dropdown desplegable-govco">
+          <label for="dropdown1">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input type="hidden" value="2" aria-invalid="false" aria-describedby="alert-id">
+            <button class="btn-dropdown" type="button" id="dropdown1" data-bs-toggle="dropdown" aria-expanded="false">
+              Escoger
+            </button>
+            <div class="input-group icons-dropdown">
+              <span class="input-group-text govco-icon govco-angle-down"></span>
+            </div>          
+            <div class="dropdown-menu dropdown-options-govco" aria-labelledby="dropdown1">
+              <ul>
+                <li tabindex="0" class="dropdown-item" data-value="1">Opción 1</li>
+                <li tabindex="0" class="dropdown-item" data-value="2">Opción 2</li>
+                <li tabindex="0" class="dropdown-item" data-value="3">Opción 3</li>
+                <li tabindex="0" class="dropdown-item" data-value="4">Opción 4</li>
+                <li tabindex="0" class="dropdown-item" data-value="5">Opción 5</li>
+                <li tabindex="0" class="dropdown-item" data-value="6">Opción 6</li>
+              </ul>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id">Texto de ayuda</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Lista - Estado Inválido
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="dropdown desplegable-govco">
+          <label for="dropdown2">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input type="hidden" value="" aria-invalid="true" aria-describedby="alert-id2">
+            <button class="btn-dropdown" type="button" id="dropdown2" data-bs-toggle="dropdown" aria-expanded="false">
+              Escoger
+            </button>
+            <div class="input-group icons-dropdown">
+              <span class="input-group-text govco-icon govco-angle-down"></span>
+            </div>          
+            <div class="dropdown-menu dropdown-options-govco" aria-labelledby="dropdown2">
+              <ul>
+                <li tabindex="0" class="dropdown-item" data-value="1">Opción 1</li>
+                <li tabindex="0" class="dropdown-item" data-value="2">Opción 2</li>
+                <li tabindex="0" class="dropdown-item" data-value="3">Opción 3</li>
+                <li tabindex="0" class="dropdown-item" data-value="4">Opción 4</li>
+                <li tabindex="0" class="dropdown-item" data-value="5">Opción 5</li>
+                <li tabindex="0" class="dropdown-item" data-value="6">Opción 6</li>
+              </ul>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id2">Texto que explica el error</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Filtro de búsqueda
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="dropdown desplegable-govco filter-govco">
+          <label for="dropdownFiltro">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input type="hidden" value="" aria-invalid="false" aria-describedby="alert-id-filtro">
+            <input class="btn-dropdown" type="text" placeholder="Ingrese texto…" autocomplete="off" id="dropdownFiltro" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="input-group icons-dropdown">
+              <button class="input-group-text govco-icon govco-times icon-close-govco d-none"></button>
+              <span class="input-group-text govco-icon govco-angle-down"></span>
+              <span class="input-group-text govco-icon govco-exclamation-circle"></span>
+            </div>
+            <div class="dropdown-menu dropdown-options-govco" aria-labelledby="dropdownFiltro">
+              <ul>
+                <li tabindex="0" class="dropdown-item" data-value="1">Opción 1</li>
+                <li tabindex="0" class="dropdown-item" data-value="2">Opción 2</li>
+                <li tabindex="0" class="dropdown-item" data-value="3">Opción 3</li>
+                <li tabindex="0" class="dropdown-item" data-value="4">Opción 4</li>
+                <li tabindex="0" class="dropdown-item" data-value="5">Opción 5</li>
+                <li tabindex="0" class="dropdown-item" data-value="6">Opción 6</li>
+              </ul>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id-filtro">Texto de ayuda</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Filtro de búsqueda - Estado Inválido
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="dropdown desplegable-govco filter-govco">
+          <label for="dropdownFiltro2">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input type="hidden" value="" aria-invalid="true" aria-describedby="alert-id-filtro2">
+            <input class="btn-dropdown" type="text" placeholder="Ingrese texto…" autocomplete="off" id="dropdownFiltro2" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="input-group icons-dropdown">
+              <button class="input-group-text govco-icon govco-times icon-close-govco d-none"></button>
+              <span class="input-group-text govco-icon govco-angle-down"></span>
+              <span class="input-group-text govco-icon govco-exclamation-circle"></span>
+            </div>
+            <div class="dropdown-menu dropdown-options-govco" aria-labelledby="dropdownFiltro2">
+              <ul>
+                <li tabindex="0" class="dropdown-item" data-value="1">Opción 1</li>
+                <li tabindex="0" class="dropdown-item" data-value="2">Opción 2</li>
+                <li tabindex="0" class="dropdown-item" data-value="3">Opción 3</li>
+                <li tabindex="0" class="dropdown-item" data-value="4">Opción 4</li>
+                <li tabindex="0" class="dropdown-item" data-value="5">Opción 5</li>
+                <li tabindex="0" class="dropdown-item" data-value="6">Opción 6</li>
+              </ul>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id-filtro2">Texto que explica el error</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Casillas de verificación - Checkbox
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="dropdown desplegable-govco check-govco">
+          <label for="dropdownCheck">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input type="hidden" value="" aria-invalid="false" aria-describedby="alert-id-check" placeholder="Escoger">          
+            <button class="btn-dropdown" type="button" id="dropdownCheck" data-bs-toggle="dropdown" aria-expanded="false" title="">
+              Escoger
+            </button>
+            <div class="input-group icons-dropdown">
+              <button class="input-group-text govco-icon govco-times btn-close-govco d-none"></button>
+              <span class="input-group-text govco-icon govco-angle-down"></span>
+            </div>
+            <div class="dropdown-menu dropdown-options-govco" aria-labelledby="dropdownCheck">
+              <ul>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt1" type="checkbox" value="1" tabindex="-1"/>
+                  <label for="opt1">Opción 1</label>
+                </li>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt2" type="checkbox" value="2" tabindex="-1"/>
+                  <label for="opt2">Opción 2</label>
+                </li>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt3" type="checkbox" value="3" tabindex="-1"/>
+                  <label for="opt3">Opción 3</label>
+                </li>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt4" type="checkbox" value="4" tabindex="-1"/>
+                  <label for="opt4">Opción 4</label>
+                </li>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt5" type="checkbox" value="5" tabindex="-1"/>
+                  <label for="opt5">Opción 5</label>
+                </li>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt6" type="checkbox" value="6" tabindex="-1"/>
+                  <label for="opt6">Opción 6</label>
+                </li>
+              </ul>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id-check">Texto de ayuda</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Casillas de verificación - Switches
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="dropdown desplegable-govco check-govco">
+          <label for="dropdownCheck2">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input type="hidden" value="" aria-invalid="false" aria-describedby="alert-id-check2" placeholder="Escoger">          
+            <button class="btn-dropdown" type="button" id="dropdownCheck2" data-bs-toggle="dropdown" aria-expanded="false" title="">
+              Escoger
+            </button>
+            <div class="input-group icons-dropdown">
+              <button class="input-group-text govco-icon govco-times btn-close-govco d-none"></button>
+              <span class="input-group-text govco-icon govco-angle-down"></span>
+            </div>
+            <div class="dropdown-menu dropdown-options-govco" aria-labelledby="dropdownCheck2">
+              <ul>
+                <li tabindex="0" class="dropdown-item switch-seleccion-govco form-switch">
+                  <input class="form-check-input" type="checkbox" id="opts1" value="1" tabindex="-1">
+                  <label for="opts1">Switch 1</label>
+                </li>
+                <li tabindex="0" class="dropdown-item switch-seleccion-govco form-switch">
+                  <input class="form-check-input" type="checkbox" id="opts2" value="2" tabindex="-1">
+                  <label for="opts2">Switch 2</label>
+                </li>
+                <li tabindex="0" class="dropdown-item switch-seleccion-govco form-switch">
+                  <input class="form-check-input" type="checkbox" id="opts3" value="3" tabindex="-1">
+                  <label for="opts3">Switch 3</label>
+                </li>
+                <li tabindex="0" class="dropdown-item switch-seleccion-govco form-switch">
+                  <input class="form-check-input" type="checkbox" id="opts4" value="4" tabindex="-1">
+                  <label for="opts4">Switch 4</label>
+                </li>
+                <li tabindex="0" class="dropdown-item switch-seleccion-govco form-switch">
+                  <input class="form-check-input" type="checkbox" id="opts5" value="5" tabindex="-1">
+                  <label for="opts5">Switch 5</label>
+                </li>
+                <li tabindex="0" class="dropdown-item switch-seleccion-govco form-switch">
+                  <input class="form-check-input" type="checkbox" id="opts6" value="6" tabindex="-1">
+                  <label for="opts6">Switch 6</label>
+                </li>
+              </ul>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id-check2">Texto de ayuda</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Casillas de verificación - Radio button
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="dropdown desplegable-govco check-govco">
+          <label for="dropdownCheck3">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input type="hidden" value="" aria-invalid="false" aria-describedby="alert-id-check3" placeholder="Escoger">          
+            <button class="btn-dropdown" type="button" id="dropdownCheck3" data-bs-toggle="dropdown" aria-expanded="false" title="">
+              Escoger
+            </button>
+            <div class="input-group icons-dropdown">
+              <button class="input-group-text govco-icon govco-times btn-close-govco d-none"></button>
+              <span class="input-group-text govco-icon govco-angle-down"></span>
+            </div>
+            <div class="dropdown-menu dropdown-options-govco" aria-labelledby="dropdownCheck3">
+              <ul>
+                <li tabindex="0" class="dropdown-item radio-seleccion-govco">
+                  <input type="radio" id="optr1" name="radioButton1" value="1" tabindex="-1">
+                  <label for="optr1">Opción 1</label>
+                </li>
+                <li tabindex="0" class="dropdown-item radio-seleccion-govco">
+                  <input type="radio" id="optr2" name="radioButton1" value="2" tabindex="-1">
+                  <label for="optr2">Opción 2</label>
+                </li>
+                <li tabindex="0" class="dropdown-item radio-seleccion-govco">
+                  <input type="radio" id="optr3" name="radioButton1" value="3" tabindex="-1">
+                  <label for="optr3">Opción 3</label>
+                </li>
+                <li tabindex="0" class="dropdown-item radio-seleccion-govco">
+                  <input type="radio" id="optr4" name="radioButton1" value="4" tabindex="-1">
+                  <label for="optr4">Opción 4</label>
+                </li>
+                <li tabindex="0" class="dropdown-item radio-seleccion-govco">
+                  <input type="radio" id="optr5" name="radioButton1" value="5" tabindex="-1">
+                  <label for="optr5">Opción 5</label>
+                </li>
+                <li tabindex="0" class="dropdown-item radio-seleccion-govco">
+                  <input type="radio" id="optr6" name="radioButton1" value="6" tabindex="-1">
+                  <label for="optr6">Opción 6</label>
+                </li>
+              </ul>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id-check3">Texto de ayuda</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Casillas de verificación - Estado Inválido
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="dropdown desplegable-govco check-govco">
+          <label for="dropdownCheck4">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input type="hidden" value="" aria-invalid="true" aria-describedby="alert-id-check4" placeholder="Escoger" data>          
+            <button class="btn-dropdown" type="button" id="dropdownCheck4" data-bs-toggle="dropdown" aria-expanded="false" title="">
+              Escoger
+            </button>
+            <div class="input-group icons-dropdown">
+              <button class="input-group-text govco-icon govco-times btn-close-govco d-none"></button>
+              <span class="input-group-text govco-icon govco-angle-down"></span>
+            </div>
+            <div class="dropdown-menu dropdown-options-govco" aria-labelledby="dropdownCheck4">
+              <ul>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt1" type="checkbox" value="1" tabindex="-1"/>
+                  <label for="opt1">Opción 1</label>
+                </li>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt2" type="checkbox" value="2" tabindex="-1"/>
+                  <label for="opt2">Opción 2</label>
+                </li>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt3" type="checkbox" value="3" tabindex="-1"/>
+                  <label for="opt3">Opción 3</label>
+                </li>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt4" type="checkbox" value="4" tabindex="-1"/>
+                  <label for="opt4">Opción 4</label>
+                </li>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt5" type="checkbox" value="5" tabindex="-1"/>
+                  <label for="opt5">Opción 5</label>
+                </li>
+                <li tabindex="0" class="dropdown-item checkbox-seleccion-govco">
+                  <input id="opt6" type="checkbox" value="6" tabindex="-1"/>
+                  <label for="opt6">Opción 6</label>
+                </li>
+              </ul>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id-check4">Texto que explica el error</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Calendario - dia/mes/año
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="desplegable-govco calendar-govco">
+          <label for="dropdownCalendar">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input id="dropdownCalendar" class="btn-dropdown" type="text" aria-describedby="alert-id-calendar1" placeholder="dd/mm/aaaa" aria-autocomplete="off" calendar-selection-format="dd/mm/aaaa">
+            <div class="input-group icons-dropdown">
+              <span class="input-group-text govco-icon govco-calendar-alt"></span>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id-calendar1">Texto que explica el error</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Calendario - mes/año
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="desplegable-govco calendar-govco">
+          <label for="dropdownCalendar2">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input id="dropdownCalendar2" class="btn-dropdown" type="text" aria-describedby="alert-id-calendar2" placeholder="dd/mm/aaaa" aria-autocomplete="off" calendar-selection-format="mm/aaaa">
+            <div class="input-group icons-dropdown">
+              <span class="input-group-text govco-icon govco-calendar-alt"></span>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id-calendar2">Texto que explica el error</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Calendario - mes
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="desplegable-govco calendar-govco">
+          <label for="dropdownCalendar3">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input id="dropdownCalendar3" class="btn-dropdown" type="text" aria-describedby="alert-id-calendar3" placeholder="dd/mm/aaaa" aria-autocomplete="off" calendar-selection-format="mm">
+            <div class="input-group icons-dropdown">
+              <span class="input-group-text govco-icon govco-calendar-alt"></span>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id-calendar3">Texto que explica el error</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Calendario - año
+      </div>
+      <div class="card-body">
+        <!-- Componente -->
+        <div class="desplegable-govco calendar-govco">
+          <label for="dropdownCalendar4">Etiqueta<span aria-required="true">*</span></label>
+          <div class="container-dropdown">
+            <input id="dropdownCalendar4" class="btn-dropdown" type="text" aria-describedby="alert-id-calendar4" placeholder="dd/mm/aaaa" aria-autocomplete="off" calendar-selection-format="aaaa">
+            <div class="input-group icons-dropdown">
+              <span class="input-group-text govco-icon govco-calendar-alt"></span>
+            </div>
+            <span class="alert-desplegable-govco" id="alert-id-calendar4">Texto que explica el error</span>
+          </div>
+        </div>
+        <!-- Componente -->
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="../../src/form/desplegable.js"></script>
+</body>
+
+</html>

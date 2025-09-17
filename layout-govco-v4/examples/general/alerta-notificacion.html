@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=+, initial-scale=1.0" />
+    <title>Alerta Notificacion</title>
+    <link href="../../src/general/alerta-notificacion.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet"
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <br />
+    <div class="row m-0">
+        <div class="col-9">
+            <div class="card">
+                <div class="card-header">Alerta Emergente</div>
+                <div class="card-body">
+                    <div class="container-alerta-govco">
+                        <div class="alert alerta-govco anotificacion" role="alert">
+                            <span class="alerta-icon-govco alerta-icon-notificacion-govco anotificacion"></span>
+                            <p class="alerta-content-text">
+                                Texto que responde al usuario de forma contextual y permite
+                                acceder un
+                                <a href="#" class="alert-link alerta-link anotificacion">enlace</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">Alerta Emergente Ejemplo Interactivo</div>
+                <div class="card-body">
+                    <button type="button" class="button-notification-loader-govco" onclick="openAlert()">
+                        Ver ejemplo interactivo
+                    </button>
+                    <div class="container-alerta-interactivo" id="closealertcontainer" onclick="closeAlert()"
+                        style="display: none">
+                        <div class="container-alerta-govco" id="closealert">
+                            <div class="alert alerta-govco alerta-success-govco asuccess" role="alert">
+                                <span class="alerta-icon-govco alerta-icon-success-govco asuccess"></span>
+                                <p class="alerta-content-text">
+                                    Texto que responde al usuario de forma contextual y permite
+                                    acceder un
+                                    <a href="#" class="alert-link alerta-link asuccess">enlace</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row m-0">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">Notificacion tipo tostada</div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                        <div class="toast toast-govco" id="fixedtoast" data-autohide="false" role="alert"
+                            aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header toast-header-govco">
+                                <span class="toast-icon-govco alerta-icon-notificacion-govco anotificacion"></span>
+                                <strong class="me-auto toast-title-govco">Título notificación</strong>
+                                <small class="toast-small-mb-govco">x seg</small>
+                                <small class="toast-small-govco">Hace x segundos</small>
+                                <a href="javascript:void(0)" role="button" data-bs-dismiss="modal"
+                                    class="close-btn-toast" aria-label="Close" aria-expanded="false"
+                                    onclick="closeToast('fixedtoast')">
+                                    <span class="toast-btn-close govco-times"></span>
+                                </a>
+                            </div>
+                            <div class="toast-body toast-body-govco">
+                                Mensaje de notificación corto y conciso como respuesta al
+                                usuario
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Notificacion tipo tostada Ejemplo Interactivo
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="button-notification-loader-govco" id="liveToastBtn"
+                            onclick="openLiveToast()">
+                            Ver Ejemplo Interactivo
+                        </button>
+
+                        <div class="container-toast-interactivo" id="closetoastcontainer" onclick="closeLiveToast()"
+                            style="display: none">
+                            <div id="toastlivecontainer">
+                                <div id="livetoast" class="toast toast-govco" data-autohide="false" role="alert"
+                                    aria-live="assertive" aria-atomic="true">
+                                    <div class="toast-header toast-header-govco">
+                                        <span class="toast-icon-govco alerta-icon-error-govco aerror"></span>
+                                        <strong class="me-auto toast-title-govco">Título notificación</strong>
+                                        <small class="toast-small-mb-govco">x seg</small>
+                                        <small class="toast-small-govco">Hace x segundos</small>
+                                        <a href="javascript:void(0)" role="button" data-bs-dismiss="modal"
+                                            class="close-btn-toast" aria-label="Close" aria-expanded="false"
+                                            onclick="closeToast('livetoast')">
+                                            <span class="toast-btn-close govco-times"></span>
+                                        </a>
+                                    </div>
+                                    <div class="toast-body toast-body-govco">
+                                        Mensaje de notificación corto y conciso como respuesta al
+                                        usuario
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="../../src/general/alerta-notificacion.js"></script>
+</body>
+
+</html>
