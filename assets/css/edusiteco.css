@@ -83,6 +83,7 @@
     content: "▼";
     font-size: 1.4rem;
     padding-left: .5rem;
+    color: var(--govcolor-cobalt);
   }
 }
 
@@ -90,7 +91,6 @@
   position: absolute;
   background-color: #ECF0FF;
   top: 100%;
-  width: 100%;
   flex-direction: column;
   display: none;
   gap: .5rem;
