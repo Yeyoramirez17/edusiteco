@@ -4,8 +4,8 @@
     "settings": {
         "appearanceTools": true,
         "layout": {
-            "contentSize": "800px",
-            "wideSize": "1200px"
+            "contentSize": "800rem",
+            "wideSize": "1200rem"
         },
         "typography": {
             "fontFamilies": [
@@ -51,22 +51,22 @@
                 {
                     "name": "Small",
                     "slug": "small",
-                    "size": "12px"
+                    "size": "1.2rem"
                 },
                 {
                     "name": "Normal",
                     "slug": "normal",
-                    "size": "16px"
+                    "size": "1.6rem"
                 },
                 {
                     "name": "Large",
                     "slug": "large",
-                    "size": "36px"
+                    "size": "3.6rem"
                 },
                 {
                     "name": "Larger",
                     "slug": "larger",
-                    "size": "48px"
+                    "size": "4.8rem"
                 }
             ],
             "fluid": true
@@ -75,7 +75,7 @@
     "styles": {
         "typography": {
             "fontFamily": "'Nunito Sans', sans-serif",
-            "fontSize": "16px",
+            "fontSize": "1.6rem",
             "lineHeight": "1.5"
         },
         "elements": {
@@ -129,5 +129,17 @@
                 }
             }
         }
-    }
+    },
+    "templateParts": [
+        {
+            "area": "header",
+            "name": "header",
+            "title": "Header"
+        },
+        {
+            "area": "footer",
+            "name": "footer",
+            "title": "Footer"
+        }
+    ]
 }

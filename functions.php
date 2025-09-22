@@ -15,7 +15,8 @@ function ita_enqueue_styles_scripts(): void {
         wp_enqueue_script('gov_enqueue_js_carrusel');
     }
     # JS
-    wp_enqueue_script('ita_enqueue_js_main', get_theme_file_uri() . '/assets/js/scripts.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('edusiteco_enqueue_js_script', get_theme_file_uri() . '/assets/js/scripts.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('edusiteco_enqueue_js_edusiteco', get_theme_file_uri() . '/assets/js/edusiteco.js', array(), '1.0', true);
     
 }
 add_action('wp_enqueue_scripts', 'ita_enqueue_styles_scripts');
