@@ -29,17 +29,23 @@ function ita_add_menus(): void {
 }
 add_action('init', 'ita_add_menus');
 
-function edusiteco_add_editor_styles(): void {
-    add_editor_style(get_theme_file_uri() . '/assets/css/editor-styles.css');
-}
-add_action('after_setup_theme', 'edusiteco_add_editor_styles');
-
 function edusiteco_theme_setup(): void {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('menus');
+    add_theme_support("editor-styles");
 }
 add_action('after_setup_theme', 'edusiteco_theme_setup');
+
+function edusiteco_add_editor_styles(): void {
+    add_editor_style([
+        'assets/css/normalize.css',
+        'assets/css/style.css',
+        'assets/css/edusiteco.css',
+        'assets/css/editor-styles.css',
+    ]);
+}
+add_action('after_setup_theme', 'edusiteco_add_editor_styles');
 
 // Crear páginas automáticamente
 // function edusiteco_create_default_pages() {
