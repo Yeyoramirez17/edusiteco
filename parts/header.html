@@ -1,61 +1,54 @@
-<header class="edusiteco-header-container">
-
-    <div class="edusiteco-section-ita">
-        <div class="barra-superior-govco">
-            <a href="https://www.gov.co/" target="_blank" rel=noopener
-                aria-label="Portal del Estado Colombiano - GOV.CO"></a>
+<!-- wp:group {"tagName":"header","className":"edusiteco-header-container","layout":{"type":"constrained"}} -->
+<header class="wp-block-group edusiteco-header-container">
+    <!-- wp:group {"className":"edusiteco-section-ita","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+    <div class="wp-block-group edusiteco-section-ita">
+        <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+        <div class="wp-block-group">
+            <!-- wp:html -->
+            <div class="barra-superior-govco">
+                <a href="https://www.gov.co/" target="_blank" rel="noopener"
+                    aria-label="Portal del Estado Colombiano - GOV.CO"></a>
+            </div>
+            <!-- /wp:html -->
         </div>
-        <div class="edusiteco-menu-ita__container">
-            <ul class="edusiteco-menu-ita__menu">
-                <li class="edusiteco-menu-ita__item"><a href="#">Transparencia</a></li>
-                <li class="edusiteco-menu-ita__item"><a href="#">Atención al ciudadano</a></li>
-                <li class="edusiteco-menu-ita__item"><a href="#">Participa</a></li>
-            </ul>
-        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:navigation {"overlayBackgroundColor":"primary","overlayTextColor":"background","className":"edusiteco-menu-ita__container","fontSize":"small","layout":{"type":"flex","justifyContent":"right"}} -->
+        <!-- wp:navigation-link {"label":"Transparencia","url":"#"} /-->
+
+        <!-- wp:navigation-link {"label":"Atención al ciudadano","url":"#"} /-->
+
+        <!-- wp:navigation-link {"label":"Participa","url":"#"} /-->
+        <!-- /wp:navigation -->
     </div>
+    <!-- /wp:group -->
 
-    <div class="edusiteco-menu-main">
-        <a class="edusiteco-menu-main__logo" href="/"></a>
+    <!-- wp:group {"className":"edusiteco-menu-main","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+    <div class="wp-block-group edusiteco-menu-main">
+        <!-- wp:site-logo {"width":80,"shouldSyncIcon":true,"className":"edusiteco-menu-main__logo"} /-->
 
-        <nav class="edusiteco-menu-main__container" id="edusiteco-menu-main__container">
-            <ul class="edusiteco-menu" id="edusiteco-menu">
-                <li><a href="/">Inicio</a></li>
-                <li class="menu-item-has-children">
-                    <a href="#">La entidad</a>
-                    <ul class="sub-menu">
-                        <li><a href="/vision">Misión, visión y valores</a></li>
-                        <li><a href="#">Organigrama</a></li>
-                        <li><a href="#">Directivos</a></li>
-                        <li><a href="#">Historia</a></li>
-                        <li><a href="#">Reconocimientos</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Normatividad</a></li>
-                <li><a href="/directory">Directorio</a></li>
-            </ul>
-        </nav>
+        <!-- wp:navigation {"style":{"spacing":{"blockGap":"1rem"},"typography":{"fontSize":"18px"}}} -->
+        <!-- wp:navigation-link {"label":"Inicio","url":"/"} /-->
 
-        <form class="edusiteco-search-form" role="search" method="get" action="/">
-            <label class="edusiteco-search-label">
-                <input type="text" name="edusiteco-search-input" class="edusiteco-search-input"
-                    id="edusiteco-search-input" placeholder="Search...">
-            </label>
-            <button type="submit" name="edusiteco-search-submit" class="edusiteco-search-submit"
-                id="edusite-search-submit">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#FFF" class="bi bi-search"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
-            </button>
-        </form>
+        <!-- wp:navigation-submenu {"label":"La entidad","url":"#"} -->
+        <!-- wp:navigation-link {"label":"Misión, visión y valores","url":"/vision"} /-->
 
-        <button class="edusiteco-menu-main__btn-menu" id="edusiteco-menu-main__btn-menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-            </svg>
-        </button>
+        <!-- wp:navigation-link {"label":"Organigrama","url":"#"} /-->
+
+        <!-- wp:navigation-link {"label":"Directivos","url":"#"} /-->
+
+        <!-- wp:navigation-link {"label":"Historia","url":"#"} /-->
+
+        <!-- wp:navigation-link {"label":"Reconocimientos","url":"#"} /-->
+        <!-- /wp:navigation-submenu -->
+
+        <!-- wp:navigation-link {"label":"Normatividad","url":"#"} /-->
+
+        <!-- wp:navigation-link {"label":"Directorio","url":"#"} /-->
+        <!-- /wp:navigation -->
+
+        <!-- wp:search {"label":"","showLabel":false,"buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"className":"edusiteco-search-form"} /-->
     </div>
+    <!-- /wp:group -->
 </header>
+<!-- /wp:group -->

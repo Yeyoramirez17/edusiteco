@@ -4,45 +4,55 @@
     "settings": {
         "appearanceTools": true,
         "layout": {
-            "contentSize": "800rem",
-            "wideSize": "1200rem"
+            "contentSize": "840px",
+            "wideSize": "1024px"
         },
         "typography": {
             "fontFamilies": [
                 {
-                    "name": "Nunito Sans",
-                    "slug": "nunito-sans",
-                    "fontFamily": "'Nunito Sans', sans-serif",
+                    "name": "Plus Jakarta Sans",
+                    "slug": "plus-jakarta-sans",
+                    "fontFamily": "'Plus Jakarta Sans', sans-serif",
                     "fontFace": [
                         {
-                            "fontFamily": "'Nunito Sans', sans-serif",
+                            "fontFamily": "Plus Jakarta Sans",
                             "fontWeight": "300",
                             "fontStyle": "light",
-                            "src": [ "file:./assets/fonts/Nunito_Sans/NunitoSans-Light.ttf" ]
+                            "src": [
+                                "file:./assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Light.ttf"
+                            ]
                         },
                         {
-                            "fontFamily": "'Nunito Sans', sans-serif",
+                            "fontFamily": "Plus Jakarta Sans",
                             "fontWeight": "400",
                             "fontStyle": "normal",
-                            "src": [ "file:./assets/fonts/Nunito_Sans/NunitoSans-Regular.ttf" ]
+                            "src": [
+                                "file:./assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf"
+                            ]
                         },
                         {
-                            "fontFamily": "'Nunito Sans', sans-serif",
+                            "fontFamily": "Plus Jakarta Sans",
                             "fontWeight": "500",
                             "fontStyle": "medium",
-                            "src": [ "file:./assets/fonts/Nunito_Sans/NunitoSans-Medium.ttf" ]
+                            "src": [
+                                "file:./assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Medium.ttf"
+                            ]
                         },
                         {
-                            "fontFamily": "'Nunito Sans', sans-serif",
+                            "fontFamily": "Plus Jakarta Sans",
                             "fontWeight": "600",
                             "fontStyle": "semi-bold",
-                            "src": [ "file:./assets/fonts/Nunito_Sans/NunitoSans-SemiBold.ttf" ]
+                            "src": [
+                                "file:./assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBold.ttf"
+                            ]
                         },
                         {
-                            "fontFamily": "'Nunito Sans', sans-serif",
+                            "fontFamily": "Plus Jakarta Sans",
                             "fontWeight": "700",
                             "fontStyle": "bold",
-                            "src": [ "file:./assets/fonts/Nunito_Sans/NunitoSans-Bold.ttf" ]
+                            "src": [
+                                "file:./assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Bold.ttf"
+                            ]
                         }
                     ]
                 }
@@ -70,11 +80,40 @@
                 }
             ],
             "fluid": true
+        },
+        "color": {
+            "palette": [
+                {
+                    "slug": "prussian-blue",
+                    "color": "#003049",
+                    "name": "Azul de Prusia"
+                },
+                {
+                    "slug": "fire-engine-red",
+                    "color": "#d62828",
+                    "name": "Rojo de Bomberos"
+                },
+                {
+                    "slug": "orange-wheel",
+                    "color": "#f77f00",
+                    "name": "Naranja Rueda"
+                },
+                {
+                    "slug": "xanthous",
+                    "color": "#fcbf49",
+                    "name": "Xanthous"
+                },
+                {
+                    "slug": "vanilla",
+                    "color": "#eae2b7",
+                    "name": "Vainilla"
+                }
+            ]
         }
     },
     "styles": {
         "typography": {
-            "fontFamily": "'Nunito Sans', sans-serif",
+            "fontFamily": "'Plus Jakarta Sans', sans-serif",
             "fontSize": "1.6rem",
             "lineHeight": "1.5"
         },
@@ -125,7 +164,16 @@
         "blocks": {
             "core/paragraph": {
                 "typography": {
+                    "fontWeight": "500"
+                }
+            },
+            "core/navigation": {
+                "typography": {
+                    "fontSize": "1.6rem",
                     "fontWeight": "600"
+                },
+                "dimensions": {
+                    "blockGap": ".5rem"
                 }
             }
         }
@@ -140,6 +188,22 @@
             "area": "footer",
             "name": "footer",
             "title": "Footer"
+        }
+    ],
+    "customTemplates": [
+        {
+            "name": "page-vision",
+            "title": "Vision Page",
+            "postTypes": [
+                "page"
+            ]
+        },
+        {
+            "name": "page-directory",
+            "title": "Directory Page",
+            "postTypes": [
+                "page"
+            ]
         }
     ]
 }
