@@ -38,6 +38,8 @@ function edusiteco_theme_setup(): void {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('menus');
+    add_theme_support( 'block-templates' );
+    add_theme_support( 'wp-block-styles' );
 }
 add_action('after_setup_theme', 'edusiteco_theme_setup');
 

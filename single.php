@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="edusiteco-container-main container">
+<main class="edusiteco-main container">
   <article class="ita_single__article-container">
     <div class="ita_single__post-header">
       <?php if (has_post_thumbnail()): ?>

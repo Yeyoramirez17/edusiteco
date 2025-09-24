@@ -4,7 +4,7 @@
     "settings": {
         "appearanceTools": true,
         "layout": {
-            "contentSize": "800rem",
+            "contentSize": "640rem",
             "wideSize": "1200rem"
         },
         "typography": {
@@ -70,6 +70,12 @@
                 }
             ],
             "fluid": true
+        },
+        "spacing": {
+            "blockGap": true,
+            "margin": true,
+            "padding": true,
+            "units": [ "px", "em", "rem", "%" ]
         }
     },
     "styles": {
@@ -77,6 +83,10 @@
             "fontFamily": "'Nunito Sans', sans-serif",
             "fontSize": "1.6rem",
             "lineHeight": "1.5"
+        },
+        "spacing": {
+            "padding": "0",
+            "blockGap": "1.6rem"
         },
         "elements": {
             "h1": {
@@ -125,7 +135,24 @@
         "blocks": {
             "core/paragraph": {
                 "typography": {
-                    "fontWeight": "600"
+                    "fontWeight": "500"
+                }
+            },
+            "core/group": {
+                "spacing": {
+                    "padding": {
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0"
+                    },
+                    "margin": {
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0"
+                    },
+                    "blockGap": "1rem"
                 }
             }
         }
