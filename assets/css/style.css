@@ -1,4 +1,42 @@
-.edusiteco-search-form {
-    padding: 0;
-    width: 250px;
+
+/** Globales */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 REM = 10px */
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+.wp-block-site-logo__default {
+    margin: .5rem 0 !important;
+}
+.wp-block-site-logo__default > img{
+    width: 50px;
+}
+.edusiteco-menu-main{
+    padding: 0 5rem;
+    border-bottom: 1px solid #eaeaea;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+/*
+.edusiteco-section-ita{
+    padding: 0;
+}
+.topbar-govco {
+    background-color: #0943B5;
+    padding: .5rem 5rem;
+}
+.edusiteco-menu-ita__container{
+    padding: 1rem 5rem;
+    border-bottom: 4px solid lightcoral;
+}
+.topbar-govco a {
+    height: 32px;
+    content: url('./../images/govco.png');
+    
+}
+ */

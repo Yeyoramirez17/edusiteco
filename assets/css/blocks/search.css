@@ -1,0 +1,8 @@
+.edusiteco-search-form.wp-block-search__button-inside {
+    padding: 0.2rem !important;
+    background: transparent !important;
+}
+.wp-block-search__button-inside .wp-block-search__inside-wrapper{
+    border: none !important;
+    padding: 0;
+}

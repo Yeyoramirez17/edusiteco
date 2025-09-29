@@ -1,53 +1,63 @@
-<!-- wp:group {"tagName":"header","className":"edusiteco-header-container","layout":{"type":"constrained"}} -->
+<!-- wp:group {"tagName":"header","className":"edusiteco-header-container","layout":{"type":"default"}} -->
 <header class="wp-block-group edusiteco-header-container">
-    <!-- wp:group {"className":"edusiteco-section-ita","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-    <div class="wp-block-group edusiteco-section-ita">
-        <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-        <div class="wp-block-group">
-            <!-- wp:html -->
-            <div class="barra-superior-govco">
-                <a href="https://www.gov.co/" target="_blank" rel="noopener"
-                    aria-label="Portal del Estado Colombiano - GOV.CO"></a>
-            </div>
-            <!-- /wp:html -->
+    <!-- wp:group {"className":"edusiteco-section-ita","style":{"color":{"background":"#00000000"}}} -->
+    <div class="wp-block-group edusiteco-section-ita has-background" style="background-color:#00000000">
+        <!-- wp:group {"className":"topbar-govco","style":{"color":{"background":"#4488ee"},"spacing":{"padding":{"right":"var:preset|spacing|large","left":"var:preset|spacing|large","top":"0.2rem","bottom":"0.2rem"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
+        <div class="wp-block-group topbar-govco has-background"
+            style="background-color:#4488ee;padding-top:0.2rem;padding-right:var(--wp--preset--spacing--large);padding-bottom:0.2rem;padding-left:var(--wp--preset--spacing--large)">
+            <!-- wp:image {"id":7,"width":"auto","height":"32px","sizeSlug":"full","linkDestination":"none"} -->
+            <figure class="wp-block-image size-full is-resized"><img
+                    src="http://edusitecotheme.test/wp-content/uploads/2025/09/govco.png" alt="" class="wp-image-7"
+                    style="width:auto;height:32px" /></figure>
+            <!-- /wp:image -->
         </div>
         <!-- /wp:group -->
 
-        <!-- wp:navigation {"overlayBackgroundColor":"primary","overlayTextColor":"background","className":"edusiteco-menu-ita__container","fontSize":"small","layout":{"type":"flex","justifyContent":"right"}} -->
-        <!-- wp:navigation-link {"label":"Transparencia","url":"#"} /-->
+        <!-- wp:group {"className":"edusiteco-menu-ita__container","style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}},"border":{"bottom":{"color":"var:preset|color|orange-wheel","width":"4px"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+        <div class="wp-block-group edusiteco-menu-ita__container"
+            style="border-bottom-color:var(--wp--preset--color--orange-wheel);border-bottom-width:4px;padding-top:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small)">
+            <!-- wp:navigation {"overlayBackgroundColor":"primary","overlayTextColor":"background","fontSize":"medium","layout":{"type":"flex","justifyContent":"center"}} -->
+            <!-- wp:navigation-link {"label":"Transparencia","url":"#"} /-->
 
-        <!-- wp:navigation-link {"label":"Atención al ciudadano","url":"#"} /-->
+            <!-- wp:navigation-link {"label":"Atención al ciudadano","url":"#"} /-->
 
-        <!-- wp:navigation-link {"label":"Participa","url":"#"} /-->
-        <!-- /wp:navigation -->
+            <!-- wp:navigation-link {"label":"Participa","url":"#"} /-->
+            <!-- /wp:navigation -->
+        </div>
+        <!-- /wp:group -->
     </div>
     <!-- /wp:group -->
 
-    <!-- wp:group {"className":"edusiteco-menu-main","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-    <div class="wp-block-group edusiteco-menu-main">
+    <!-- wp:group {"className":"edusiteco-menu-main","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|large","right":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","orientation":"vertical"}} -->
+    <div class="wp-block-group edusiteco-menu-main"
+        style="padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--large)">
         <!-- wp:site-logo {"width":80,"shouldSyncIcon":true,"className":"edusiteco-menu-main__logo"} /-->
 
-        <!-- wp:navigation {"style":{"spacing":{"blockGap":"1rem"},"typography":{"fontSize":"18px"}}} -->
-        <!-- wp:navigation-link {"label":"Inicio","url":"/"} /-->
+        <!-- wp:group {"className":"wp-block-group edusiteco-menu-main__nav","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+        <div class="wp-block-group edusiteco-menu-main__nav">
+            <!-- wp:navigation {"style":{"spacing":{"blockGap":"1.5rem"},"typography":{"fontSize":"1.8rem"}}} -->
+            <!-- wp:navigation-link {"label":"Inicio","url":"/"} /-->
 
-        <!-- wp:navigation-submenu {"label":"La entidad","url":"#"} -->
-        <!-- wp:navigation-link {"label":"Misión, visión y valores","url":"/vision"} /-->
+            <!-- wp:navigation-submenu {"label":"La institución","url":"#"} -->
+            <!-- wp:navigation-link {"label":"Misión, visión y valores","url":"#"} /-->
 
-        <!-- wp:navigation-link {"label":"Organigrama","url":"#"} /-->
+            <!-- wp:navigation-link {"label":"Organigrama","url":"#"} /-->
 
-        <!-- wp:navigation-link {"label":"Directivos","url":"#"} /-->
+            <!-- wp:navigation-link {"label":"Directivos","url":"#"} /-->
 
-        <!-- wp:navigation-link {"label":"Historia","url":"#"} /-->
+            <!-- wp:navigation-link {"label":"Historia","url":"#"} /-->
 
-        <!-- wp:navigation-link {"label":"Reconocimientos","url":"#"} /-->
-        <!-- /wp:navigation-submenu -->
+            <!-- wp:navigation-link {"label":"Reconocimientos","url":"#"} /-->
+            <!-- /wp:navigation-submenu -->
 
-        <!-- wp:navigation-link {"label":"Normatividad","url":"#"} /-->
+            <!-- wp:navigation-link {"label":"Normatividad","url":"#"} /-->
 
-        <!-- wp:navigation-link {"label":"Directorio","url":"#"} /-->
-        <!-- /wp:navigation -->
+            <!-- wp:navigation-link {"label":"Directorio","url":"#"} /-->
+            <!-- /wp:navigation -->
 
-        <!-- wp:search {"label":"","showLabel":false,"buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"className":"edusiteco-search-form"} /-->
+            <!-- wp:search {"label":"","showLabel":false,"widthUnit":"px","buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"isSearchFieldHidden":true,"className":"edusiteco-search-form"} /-->
+        </div>
+        <!-- /wp:group -->
     </div>
     <!-- /wp:group -->
 </header>

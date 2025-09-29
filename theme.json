@@ -3,9 +3,48 @@
     "version": 3,
     "settings": {
         "appearanceTools": true,
+        "spacing": {
+            "padding": true,
+            "margin": true,
+            "blockGap": true,
+            "spacingScale": {
+                "steps": 1,
+                "mediumStep": 1.5,
+                "increment": 1.5,
+                "operator": "*",
+                "unit": "rem"
+            },
+            "spacingSizes": [
+                {
+                    "slug": "x-small",
+                    "size": "0.5rem",
+                    "name": "Extra Small"
+                },
+                {
+                    "slug": "small",
+                    "size": "1rem",
+                    "name": "Small"
+                },
+                {
+                    "slug": "medium",
+                    "size": "1.5rem",
+                    "name": "Medium"
+                },
+                {
+                    "slug": "large",
+                    "size": "2rem",
+                    "name": "Large"
+                },
+                {
+                    "slug": "x-large",
+                    "size": "3rem",
+                    "name": "Extra Large"
+                }
+            ]
+        },
         "layout": {
-            "contentSize": "840px",
-            "wideSize": "1024px"
+            "contentSize": "84rem",
+            "wideSize": "64rem"
         },
         "typography": {
             "fontFamilies": [
@@ -17,7 +56,7 @@
                         {
                             "fontFamily": "Plus Jakarta Sans",
                             "fontWeight": "300",
-                            "fontStyle": "light",
+                            "fontStyle": "normal",
                             "src": [
                                 "file:./assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Light.ttf"
                             ]
@@ -33,7 +72,7 @@
                         {
                             "fontFamily": "Plus Jakarta Sans",
                             "fontWeight": "500",
-                            "fontStyle": "medium",
+                            "fontStyle": "normal",
                             "src": [
                                 "file:./assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Medium.ttf"
                             ]
@@ -41,7 +80,7 @@
                         {
                             "fontFamily": "Plus Jakarta Sans",
                             "fontWeight": "600",
-                            "fontStyle": "semi-bold",
+                            "fontStyle": "normal",
                             "src": [
                                 "file:./assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBold.ttf"
                             ]
@@ -49,7 +88,7 @@
                         {
                             "fontFamily": "Plus Jakarta Sans",
                             "fontWeight": "700",
-                            "fontStyle": "bold",
+                            "fontStyle": "normal",
                             "src": [
                                 "file:./assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Bold.ttf"
                             ]
@@ -59,9 +98,14 @@
             ],
             "fontSizes": [
                 {
+                    "name": "Extra Small",
+                    "slug": "x-small",
+                    "size": "1.2rem"
+                },
+                {
                     "name": "Small",
                     "slug": "small",
-                    "size": "1.2rem"
+                    "size": "1.4rem"
                 },
                 {
                     "name": "Normal",
@@ -69,13 +113,28 @@
                     "size": "1.6rem"
                 },
                 {
-                    "name": "Large",
-                    "slug": "large",
-                    "size": "3.6rem"
+                    "name": "Medium",
+                    "slug": "medium",
+                    "size": "1.8rem"
                 },
                 {
-                    "name": "Larger",
-                    "slug": "larger",
+                    "name": "Large",
+                    "slug": "large",
+                    "size": "2rem"
+                },
+                {
+                    "name": "Extra Large",
+                    "slug": "x-large",
+                    "size": "2.4rem"
+                },
+                {
+                    "name": "2X Large",
+                    "slug": "xx-large",
+                    "size": "3.2rem"
+                },
+                {
+                    "name": "3X Large",
+                    "slug": "xxx-large",
                     "size": "4.8rem"
                 }
             ],
@@ -107,55 +166,131 @@
                     "slug": "vanilla",
                     "color": "#eae2b7",
                     "name": "Vainilla"
+                },
+                {
+                    "slug": "white",
+                    "color": "#ffffff",
+                    "name": "Blanco"
+                },
+                {
+                    "slug": "gray-50",
+                    "color": "#f9fafb",
+                    "name": "Gris 50"
+                },
+                {
+                    "slug": "gray-100",
+                    "color": "#f3f4f6",
+                    "name": "Gris 100"
+                },
+                {
+                    "slug": "gray-500",
+                    "color": "#6b7280",
+                    "name": "Gris 500"
+                },
+                {
+                    "slug": "gray-900",
+                    "color": "#111827",
+                    "name": "Gris 900"
+                },
+                {
+                    "slug": "black",
+                    "color": "#000000",
+                    "name": "Negro"
                 }
             ]
+        },
+        "blocks": {
+            "core/group": {
+                "spacing": {
+                    "padding": true,
+                    "margin": true
+                }
+            },
+            "core/list": {
+                "color": {
+                    "text": true,
+                    "background": true,
+                    "link": true
+                },
+                "spacing": {
+                    "margin": true,
+                    "padding": true,
+                    "blockGap": true
+                },
+                "border": {
+                    "color": true,
+                    "radius": true,
+                    "width": true,
+                    "style": true
+                },
+                "typography": {
+                    "fontStyle": true,
+                    "fontWeight": true,
+                    "lineHeight": true,
+                    "textDecoration": false
+                }
+            }
         }
     },
     "styles": {
         "typography": {
-            "fontFamily": "'Plus Jakarta Sans', sans-serif",
+            "fontFamily": "var(--wp--preset--font-family--plus-jakarta-sans)",
             "fontSize": "1.6rem",
             "lineHeight": "1.5"
+        },
+        "spacing": {
+            "margin": {
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0"
+            },
+            "padding": {
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0"
+            }
         },
         "elements": {
             "h1": {
                 "typography": {
-                    "fontSize": "48px",
+                    "fontSize": "4.8rem",
                     "fontWeight": "700",
                     "lineHeight": "1.2"
                 }
             },
             "h2": {
                 "typography": {
-                    "fontSize": "36px",
+                    "fontSize": "3.6rem",
                     "fontWeight": "600",
                     "lineHeight": "1.3"
                 }
             },
             "h3": {
                 "typography": {
-                    "fontSize": "24px",
+                    "fontSize": "2.4rem",
                     "fontWeight": "600",
                     "lineHeight": "1.4"
                 }
             },
             "h4": {
                 "typography": {
-                    "fontSize": "20px",
+                    "fontSize": "2rem",
                     "fontWeight": "600",
                     "lineHeight": "1.5"
                 }
             },
             "h5": {
                 "typography": {
-                    "fontSize": "18px",
+                    "fontSize": "1.8rem",
                     "fontWeight": "600",
                     "lineHeight": "1.6"
                 }
             },
             "h6": {
                 "typography": {
-                    "fontSize": "16px",
+                    "fontSize": "1.6rem",
                     "fontWeight": "600",
                     "lineHeight": "1.6"
                 }
@@ -164,16 +299,57 @@
         "blocks": {
             "core/paragraph": {
                 "typography": {
+                    "fontSize": "1.6rem",
                     "fontWeight": "500"
                 }
             },
             "core/navigation": {
                 "typography": {
                     "fontSize": "1.6rem",
-                    "fontWeight": "600"
+                    "fontWeight": "500"
+                }
+            },
+            "core/search": {
+                "elements": {
+                    "button": {
+                        "spacing": {
+                            "padding": {
+                                "top": "0.2rem",
+                                "right": "0.2rem",
+                                "bottom": "0.2rem",
+                                "left": "0.2rem"
+                            }
+                        },
+                        "border": {
+                            "radius": "0.8rem"
+                        }
+                    }
                 },
-                "dimensions": {
-                    "blockGap": ".5rem"
+                "typography": {
+                    "fontSize": "1.6rem",
+                    "fontWeight": "500"
+                },
+                "border": {
+                    "radius": ".8rem",
+                    "color": "#cccccc",
+                    "width": "1px",
+                    "style": "solid"
+                }
+            },
+            "core/group": {
+                "spacing": {
+                    "margin": {
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0"
+                    },
+                    "padding": {
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0"
+                    }
                 }
             }
         }
