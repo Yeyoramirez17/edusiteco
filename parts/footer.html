@@ -1,9 +1,9 @@
-<!-- wp:group {"className":"portales-pie-pagina-govco","layout":{"type":"default"}} -->
-<div class="wp-block-group portales-pie-pagina-govco">
-    <!-- wp:columns {"verticalAlignment":"top","className":"second-third-section","style":{"spacing":{"padding":{"right":"5rem","left":"5rem"},"blockGap":{"left":"0px"}}}} -->
+<!-- wp:group {"className":"portales-pie-pagina-govco","style":{"spacing":{"padding":{"top":"var:preset|spacing|small"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group portales-pie-pagina-govco" style="padding-top:var(--wp--preset--spacing--small)">
+    <!-- wp:columns {"verticalAlignment":"top","className":"second-third-section","style":{"spacing":{"padding":{"right":"5rem","left":"5rem"},"blockGap":{"top":"0px","left":"0px"}}}} -->
     <div class="wp-block-columns are-vertically-aligned-top second-third-section"
         style="padding-right:5rem;padding-left:5rem">
-        <!-- wp:column {"verticalAlignment":"top","layout":{"type":"default"}} -->
+        <!-- wp:column {"verticalAlignment":"top","width":"","layout":{"type":"default"}} -->
         <div class="wp-block-column is-vertically-aligned-top">
             <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical","verticalAlignment":"center","justifyContent":"center"}} -->
             <div class="wp-block-group"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
@@ -38,21 +38,23 @@
         <!-- /wp:column -->
 
         <!-- wp:column {"verticalAlignment":"top","className":"second-section"} -->
-        <div class="wp-block-column is-vertically-aligned-top second-section"><!-- wp:heading {"level":5} -->
-            <h5 class="wp-block-heading">Nombre completo del portal</h5>
+        <div class="wp-block-column is-vertically-aligned-top second-section">
+            <!-- wp:heading {"level":5,"fontSize":"medium"} -->
+            <h5 class="wp-block-heading has-medium-font-size">Nombre completo del portal</h5>
             <!-- /wp:heading -->
 
-            <!-- wp:list {"className":"contact-data-container"} -->
-            <ul class="wp-block-list contact-data-container"><!-- wp:list-item -->
-                <li>Dirección: xxxxxx xxx xxx <br>Departamento y municipio.</li>
+            <!-- wp:list {"className":"contact-data-container","fontSize":"x-small"} -->
+            <ul class="wp-block-list contact-data-container has-x-small-font-size">
+                <!-- wp:list-item {"fontSize":"normal"} -->
+                <li class="has-normal-font-size">Dirección: xxxxxx xxx xxx <br>Departamento y municipio.</li>
                 <!-- /wp:list-item -->
 
-                <!-- wp:list-item -->
-                <li>Código postal: xxxx</li>
+                <!-- wp:list-item {"fontSize":"normal"} -->
+                <li class="has-normal-font-size">Código postal: xxxx</li>
                 <!-- /wp:list-item -->
 
-                <!-- wp:list-item -->
-                <li>Horario de atención: Lunes a viernes <br>xx:xx a.m. - xx:xx p.m.</li>
+                <!-- wp:list-item {"fontSize":"normal"} -->
+                <li class="has-normal-font-size">Horario de atención: Lunes a viernes <br>xx:xx a.m. - xx:xx p.m.</li>
                 <!-- /wp:list-item -->
             </ul>
             <!-- /wp:list -->
@@ -72,28 +74,59 @@
         <!-- /wp:column -->
 
         <!-- wp:column {"verticalAlignment":"top","className":"third-section"} -->
-        <div class="wp-block-column is-vertically-aligned-top third-section"><!-- wp:heading {"level":5} -->
-            <h5 class="wp-block-heading"><span class="govco-icon govco-phone-alt"></span> Contacto</h5>
+        <div class="wp-block-column is-vertically-aligned-top third-section">
+            <!-- wp:heading {"level":5,"fontSize":"medium"} -->
+            <h5 class="wp-block-heading has-medium-font-size"><span class="govco-icon govco-phone-alt"></span> Contacto
+            </h5>
             <!-- /wp:heading -->
 
             <!-- wp:list {"className":"contact-data-container"} -->
-            <ul class="wp-block-list contact-data-container"><!-- wp:list-item -->
-                <li>Teléfono conmutador: +57(xx) xxx xx xx</li>
+            <ul class="wp-block-list contact-data-container">
+                <!-- wp:list-item {"fontSize":"normal"} -->
+                <li class="has-normal-font-size">Teléfono conmutador: +57(xx) xxx xx xx</li>
                 <!-- /wp:list-item -->
 
-                <!-- wp:list-item -->
-                <li>Línea gratuita: 01-800-xxxxxxxx</li>
+                <!-- wp:list-item {"fontSize":"normal"} -->
+                <li class="has-normal-font-size">Línea gratuita: 01-800-xxxxxxxx</li>
                 <!-- /wp:list-item -->
 
-                <!-- wp:list-item -->
-                <li>Línea anticorrupción: 01-800-xxxxxxxx</li>
+                <!-- wp:list-item {"fontSize":"normal"} -->
+                <li class="has-normal-font-size">Línea anticorrupción: 01-800-xxxxxxxx</li>
                 <!-- /wp:list-item -->
 
-                <!-- wp:list-item -->
-                <li>Correo institucional: <a href="mailto:entidad@entidad.gov.co">entidad@entidad.gov.co</a></li>
+                <!-- wp:list-item {"fontSize":"normal"} -->
+                <li class="has-normal-font-size">Correo institucional: <a
+                        href="mailto:entidad@entidad.gov.co">entidad@entidad.gov.co</a></li>
                 <!-- /wp:list-item -->
             </ul>
             <!-- /wp:list -->
+        </div>
+        <!-- /wp:column -->
+
+        <!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:heading {"level":5,"fontSize":"medium"} -->
+            <h5 class="wp-block-heading has-medium-font-size">Enlaces de interés</h5>
+            <!-- /wp:heading -->
+
+            <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group">
+                <!-- wp:paragraph {"fontSize":"normal"} -->
+                <p class="has-normal-font-size"><a href="#">Transparencia y acceso a la información</a></p>
+                <!-- /wp:paragraph -->
+
+                <!-- wp:paragraph {"fontSize":"normal"} -->
+                <p class="has-normal-font-size"><a href="#">Participa</a></p>
+                <!-- /wp:paragraph -->
+
+                <!-- wp:paragraph {"fontSize":"normal"} -->
+                <p class="has-normal-font-size"><a href="#">La institución</a></p>
+                <!-- /wp:paragraph -->
+
+                <!-- wp:paragraph {"fontSize":"normal"} -->
+                <p class="has-normal-font-size"><a href="#">PQRS</a></p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
         </div>
         <!-- /wp:column -->
     </div>
@@ -102,12 +135,11 @@
     <!-- wp:group {"className":"first-section","layout":{"type":"default"}} -->
     <div class="wp-block-group first-section">
         <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"},"blockGap":"5px"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
-        <div class="wp-block-group"
-            style="padding-top:var(--wp--preset--spacing--x-small);padding-bottom:var(--wp--preset--spacing--x-small)">
-            <!-- wp:site-title {"style":{"typography":{"fontSize":"0.8rem"}}} /-->
+        <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--x-small);padding-bottom:var(--wp--preset--spacing--x-small)">
+            <!-- wp:site-title {"fontSize":"small"} /-->
 
-            <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.8rem"}}} -->
-            <p style="font-size:0.8rem">Todos los derechos reservados</p>
+            <!-- wp:paragraph {"fontSize":"small"} -->
+            <p class="has-small-font-size">Todos los derechos reservados</p>
             <!-- /wp:paragraph -->
         </div>
         <!-- /wp:group -->
@@ -116,9 +148,15 @@
         <div class="wp-block-group has-background"
             style="background-color:#4488ee;padding-top:var(--wp--preset--spacing--x-small);padding-right:5rem;padding-bottom:var(--wp--preset--spacing--x-small);padding-left:5rem">
             <!-- wp:image {"lightbox":{"enabled":false},"id":7,"width":"auto","height":"28px","sizeSlug":"full","linkDestination":"custom"} -->
-            <figure class="wp-block-image size-full is-resized"><a href="https://gov.co/"><img
-                        src="http://edusitecotheme.test/wp-content/uploads/2025/09/govco.png" alt="" class="wp-image-7"
-                        style="width:auto;height:28px" /></a></figure>
+            <figure class="wp-block-image size-full is-resized">
+                <a href="https://gov.co/">
+                <img
+                    src="http://edusitecotheme.test/wp-content/uploads/2025/09/govco.png" 
+                    alt="" class="wp-image-7"
+                    style="width:auto;height:28px" 
+                />
+                </a>
+            </figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:group -->

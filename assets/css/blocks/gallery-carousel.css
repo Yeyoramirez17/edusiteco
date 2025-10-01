@@ -1,0 +1,153 @@
+/**
+ * GALLERY-CAROUSEL.CSS - Carrusel para nueva estructura de WordPress
+ */
+
+/* Contenedor principal del carrusel - NUEVA ESTRUCTURA */
+.wp-block-gallery.is-style-carousel {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.wp-block-gallery.is-style-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Items del carrusel - NUEVA ESTRUCTURA */
+.wp-block-gallery.is-style-carousel .wp-block-image {
+    flex: 0 0 auto !important;
+    width: 300px !important;
+    margin: 0 !important;
+    scroll-snap-align: start;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.wp-block-gallery.is-style-carousel .wp-block-image:hover {
+    transform: scale(1.05);
+}
+
+/* Imágenes del carrusel */
+.wp-block-gallery.is-style-carousel img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+}
+
+/* Leyendas en carrusel */
+.wp-block-gallery.is-style-carousel figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+/* Carrusel con controles - NUEVA ESTRUCTURA */
+.wp-block-gallery.is-style-carousel-with-controls {
+    position: relative;
+    overflow: hidden;
+}
+
+.wp-block-gallery.is-style-carousel-with-controls {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    transition: transform 0.5s ease;
+    gap: 1rem;
+}
+
+/* Controles de navegación */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.carousel-prev,
+.carousel-next {
+    background: #003049;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1.6rem;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: #d62828;
+}
+
+/* Indicadores/puntos */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background: #003049;
+}
+
+/* Anular estilos por defecto de columnas para carrusel */
+.wp-block-gallery.is-style-carousel.columns-2,
+.wp-block-gallery.is-style-carousel.columns-3,
+.wp-block-gallery.is-style-carousel.columns-4 {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.wp-block-gallery.is-style-carousel.has-nested-images {
+    display: flex !important;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .wp-block-gallery.is-style-carousel .wp-block-image {
+        width: 250px !important;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .wp-block-gallery.is-style-carousel .wp-block-image {
+        width: 200px !important;
+    }
+    
+    .wp-block-gallery.is-style-carousel img {
+        height: 150px !important;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .wp-block-gallery.is-style-carousel .wp-block-image {
+        width: 180px !important;
+    }
+}

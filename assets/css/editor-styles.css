@@ -1,0 +1,42 @@
+/* Estilos específicos para el editor */
+.block-editor-page .editor-styles-wrapper {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Headings en el editor */
+.block-editor-page .editor-styles-wrapper h1 {
+    font-size: 3.2rem !important;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+}
+
+.block-editor-page .editor-styles-wrapper h2 {
+    font-size: 2.4rem !important;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+.block-editor-page .editor-styles-wrapper h3 {
+    font-size: 1.8rem !important;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+}
+
+/* Párrafos y listas */
+.block-editor-page .editor-styles-wrapper p {
+    margin-bottom: 1rem;
+}
+
+.block-editor-page .editor-styles-wrapper ul,
+.block-editor-page .editor-styles-wrapper ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+/* Separador */
+.block-editor-page .editor-styles-wrapper hr {
+    margin: 2rem 0;
+    border-color: #6b7280;
+}
